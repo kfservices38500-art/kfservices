@@ -4,6 +4,7 @@ import { MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "../components/animations/ScrollReveal";
 import KFButton from "../components/ui/KFButton";
+import ProjectModal from "../components/ProjectModal";
 
 const categories = [
   { key: "all", label: "Tous les projets" },
@@ -15,7 +16,11 @@ const categories = [
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
+    ],
     category: "maconnerie",
     categoryLabel: "Maçonnerie",
     title: "+30 m² habitables grâce à une rénovation complète",
@@ -23,7 +28,11 @@ const projects = [
     description: "Les propriétaires ont gagné un étage entier et revalorisé leur bien de 150 000 €, sans un seul jour de retard.",
   },
   {
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
+    ],
     category: "maconnerie",
     categoryLabel: "Maçonnerie",
     title: "Une extension lumineuse qui a changé leur quotidien",
@@ -31,7 +40,11 @@ const projects = [
     description: "40 m² supplémentaires avec baies vitrées et toiture terrasse.",
   },
   {
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1635424710928-0544e8512eae?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
+    ],
     category: "charpente",
     categoryLabel: "Charpente/Couverture",
     title: "Fini les infiltrations : une toiture neuve pour 30 ans",
@@ -39,7 +52,11 @@ const projects = [
     description: "Couverture ardoise intégralement remplacée avec isolation par l'extérieur.",
   },
   {
-    image: "https://images.unsplash.com/photo-1632759145905-98a82e3776a6?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1632759145905-98a82e3776a6?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566752734-2a0cd66c42f2?w=800&q=80",
+    ],
     category: "charpente",
     categoryLabel: "Charpente/Couverture",
     title: "Une charpente en chêne qui traversera les générations",
@@ -47,7 +64,11 @@ const projects = [
     description: "Charpente traditionnelle massive pour une maison neuve.",
   },
   {
-    image: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+    ],
     category: "plomberie",
     categoryLabel: "Plomberie",
     title: "-40% sur la facture de chauffage grâce à une pompe à chaleur",
@@ -55,7 +76,11 @@ const projects = [
     description: "Installation d'une PAC air/eau avec nouveaux radiateurs.",
   },
   {
-    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+      "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80",
+    ],
     category: "plomberie",
     categoryLabel: "Plomberie",
     title: "Une salle de bain spa qui valorise l'appartement",
@@ -63,7 +88,10 @@ const projects = [
     description: "Douche italienne, baignoire balnéo et finitions haut de gamme.",
   },
   {
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80",
+    ],
     category: "autres",
     categoryLabel: "Désamiantage",
     title: "Un immeuble désamianté en toute sécurité",
@@ -71,7 +99,10 @@ const projects = [
     description: "Retrait complet des matériaux amiantés dans les parties communes.",
   },
   {
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    ],
     category: "autres",
     categoryLabel: "Gouttières",
     title: "Des gouttières alu qui protègent les façades pour 25 ans",
@@ -84,7 +115,7 @@ const Realisations = () => {
   const [searchParams] = useSearchParams();
   const initialCategory = searchParams.get("category") || "all";
   const [activeCategory, setActiveCategory] = useState(initialCategory);
-
+  const [selectedProject, setSelectedProject] = useState<typeof projects[number] | null>(null);
   const filteredProjects = activeCategory === "all"
     ? projects
     : projects.filter((p) => p.category === activeCategory);
@@ -142,10 +173,11 @@ const Realisations = () => {
               >
                 <motion.div
                   whileHover={{ y: -5, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.1)" }}
-                  className="bg-background rounded-3xl overflow-hidden shadow-sm border border-border"
+                  className="bg-background rounded-3xl overflow-hidden shadow-sm border border-border cursor-pointer"
+                  onClick={() => setSelectedProject(project)}
                 >
                   <div className="relative">
-                    <img src={project.image} alt={project.title} className="w-full aspect-[4/3] object-cover" />
+                    <img src={project.images[0]} alt={project.title} className="w-full aspect-[4/3] object-cover" />
                     <span className="absolute top-4 left-4 gradient-red text-white px-4 py-1.5 rounded-full text-sm font-semibold">
                       {project.categoryLabel}
                     </span>
@@ -177,6 +209,9 @@ const Realisations = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Project Modal */}
+      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </div>
   );
 };
