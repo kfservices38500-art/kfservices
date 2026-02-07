@@ -14,7 +14,7 @@ const Footer = () => {
               <img
                 src={logoKF}
                 alt="KF Services"
-                className="h-10 w-auto mb-4 brightness-0 invert"
+                className="h-14 w-auto mb-4 brightness-0 invert"
               />
               <p className="text-base text-white/70">
                 Depuis 2003, KF Services vous accompagne pour vos projets de construction et rénovation en Île-de-France.
@@ -68,7 +68,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 text-white/70" />
-                  <span className="text-white/70">58 Rue des Tallifardières, 38500 Voiron</span>
+                  <span className="text-white/70">58 Rue des Tallifardières, 38500 Voiron, France</span>
                 </li>
               </ul>
             </div>

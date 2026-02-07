@@ -31,35 +31,18 @@ const heroImages = [
 ];
 
 const services = [
-  { icon: Hammer, label: "Maçonnerie", desc: "Murs, fondations, extensions" },
-  { icon: HomeIcon, label: "Charpente & Couverture", desc: "Toiture, isolation, zinguerie" },
-  { icon: Droplets, label: "Gouttières Alu", desc: "Évacuation, protection façades" },
-  { icon: ShieldAlert, label: "Désamiantage", desc: "Retrait sécurisé, certification SS4" },
-  { icon: Wrench, label: "Plomberie", desc: "Sanitaires, chauffage, VMC" },
-  { icon: Building2, label: "Neuf & Rénovation", desc: "Projet clé en main, coordination" },
-];
-
-const testimonials = [
-  {
-    text: "Notre salle de bain est méconnaissable ! Délais tenus, budget respecté et une équipe toujours à l'écoute. On a gagné en confort au quotidien sans aucune mauvaise surprise.",
-    name: "Marie Dupont",
-    location: "Paris 15ème",
-  },
-  {
-    text: "L'extension de notre maison s'est déroulée sans accroc. Un seul interlocuteur a tout coordonné, ce qui nous a évité beaucoup de stress. Rapport qualité-prix imbattable.",
-    name: "Jean-Pierre Martin",
-    location: "Versailles",
-  },
-  {
-    text: "Suite à une tempête, notre toiture a été réparée en un temps record. Nous avons retrouvé la sérénité très vite. Professionnalisme et réactivité exemplaires !",
-    name: "Sophie Bernard",
-    location: "Nanterre",
-  },
+  { icon: Hammer, label: "Maçonnerie & Gros œuvre" },
+  { icon: HomeIcon, label: "Charpente & Couverture" },
+  { icon: Wrench, label: "Plomberie & Chauffage" },
+  { icon: Droplets, label: "Gouttières Aluminium" },
+  { icon: ShieldAlert, label: "Désamiantage certifié SS4" },
 ];
 
 const serviceCards = [
   {
-    title: "Maçonnerie",
+    icon: Hammer,
+    title: "MAÇONNERIE",
+    subtitle: "",
     benefits: [
       "Des fondations et murs solides pour un bâti durable",
       "Des extensions qui valorisent votre bien immobilier",
@@ -67,28 +50,55 @@ const serviceCards = [
     ],
   },
   {
-    title: "Charpente & Couverture",
+    icon: HomeIcon,
+    title: "CHARPENTE & COUVERTURE",
+    subtitle: "",
     benefits: [
       "Une toiture étanche qui vous protège des intempéries",
       "Une isolation performante qui réduit vos factures d'énergie",
       "Des matériaux durables pour 30 ans de tranquillité",
+      "Zinguerie et étanchéité pour zéro infiltration",
     ],
   },
   {
-    title: "Désamiantage",
+    icon: ShieldAlert,
+    title: "DÉSAMIANTAGE",
+    subtitle: "",
     benefits: [
       "Un diagnostic clair pour savoir où vous en êtes",
       "Un retrait sécurisé par une équipe certifiée SS4",
+      "Traitement conforme des déchets, vous êtes en règle",
       "Votre santé et celle de vos proches protégées",
     ],
   },
   {
-    title: "Plomberie",
+    icon: Wrench,
+    title: "PLOMBERIE",
+    subtitle: "CONFORT & ÉCONOMIES",
     benefits: [
       "Des sanitaires fonctionnels dès le premier jour",
       "Un air sain grâce à une VMC bien dimensionnée",
       "Des économies d'énergie avec une pompe à chaleur adaptée",
+      "Un dépannage rapide pour éviter les dégâts",
     ],
+  },
+];
+
+const testimonials = [
+  {
+    text: "Notre salle de bain est méconnaissable ! Délais tenus, budget respecté et une équipe toujours à l'écoute. On a gagné en confort au quotidien sans aucune mauvaise surprise.",
+    name: "Marie Dupont",
+    location: "Voiron",
+  },
+  {
+    text: "L'extension de notre maison s'est déroulée sans accroc. Un seul interlocuteur a tout coordonné, ce qui nous a évité beaucoup de stress. Rapport qualité-prix imbattable.",
+    name: "Jean-Pierre Martin",
+    location: "Grenoble",
+  },
+  {
+    text: "Suite à une tempête, notre toiture a été réparée en un temps record. Nous avons retrouvé la sérénité très vite. Professionnalisme et réactivité exemplaires !",
+    name: "Sophie Bernard",
+    location: "Moirans",
   },
 ];
 
@@ -183,7 +193,7 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden">
+            <div className="aspect-[4/3] rounded-[2rem] overflow-hidden">
               {heroImages.map((img, i) => (
                 <img
                   key={i}
@@ -254,68 +264,123 @@ const Home = () => {
         </div>
       </ParallaxSection>
 
-      {/* Value Prop */}
+      {/* Value Prop - 3 column layout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-3 gap-6">
+          {/* Left - Photo with overlay */}
           <ScrollReveal direction="left">
-            <div className="rounded-3xl overflow-hidden">
+            <div className="relative rounded-3xl overflow-hidden h-full min-h-[400px]">
               <img
                 src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80"
                 alt="Chantier KF Services"
-                className="w-full aspect-[4/3] object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <h3 className="text-white text-2xl md:text-3xl font-bold leading-tight">
+                  Un budget maîtrisé,<br />zéro mauvaise surprise.
+                </h3>
+              </div>
             </div>
           </ScrollReveal>
+
+          {/* Center - Red header + bullet points */}
+          <ScrollReveal>
+            <div className="flex flex-col h-full">
+              <div className="gradient-red rounded-t-3xl p-6 md:p-8">
+                <h3 className="text-white text-xl md:text-2xl font-bold leading-tight">
+                  Gagnez du temps<br />et de la sérénité
+                </h3>
+              </div>
+              <div className="bg-background rounded-b-3xl p-6 md:p-8 flex-1 shadow-sm">
+                <div className="w-12 h-[3px] gradient-red rounded-full mb-6" />
+                <ul className="space-y-4 mb-6">
+                  <li className="flex items-start gap-3 text-muted-foreground text-base">
+                    <span className="w-2.5 h-2.5 rounded-full gradient-red flex-shrink-0 mt-1.5" />
+                    Vous évitez la galère de coordonner plusieurs artisans : un seul interlocuteur gère l'intégralité de votre chantier, du devis à la réception.
+                  </li>
+                  <li className="flex items-start gap-3 text-muted-foreground text-base">
+                    <span className="w-2.5 h-2.5 rounded-full gradient-red flex-shrink-0 mt-1.5" />
+                    Vous bénéficiez d'un devis détaillé et d'un planning réaliste, pour que votre projet avance sans surprise et dans les temps.
+                  </li>
+                </ul>
+                <Link
+                  to="/a-propos"
+                  className="inline-flex items-center gap-2 gradient-red-text font-bold text-base hover:underline"
+                >
+                  Découvrir nos engagements
+                  <ChevronRight className="w-5 h-5 text-primary" />
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Right - Photo with service tags */}
           <ScrollReveal direction="right">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Un budget maîtrisé,<br /><span className="gradient-red-text">zéro mauvaise surprise.</span>
-            </h2>
-            <h3 className="text-xl md:text-2xl font-semibold mb-4">
-              Gagnez du temps<br />et de la sérénité
-            </h3>
-            <p className="text-muted-foreground text-base md:text-lg mb-4">
-              Vous évitez la galère de coordonner plusieurs artisans : un seul interlocuteur gère l'intégralité de votre chantier, du devis à la réception.
-            </p>
-            <p className="text-muted-foreground text-base md:text-lg mb-6">
-              Vous bénéficiez d'un devis détaillé et d'un planning réaliste, pour que votre projet avance sans surprise et dans les temps.
-            </p>
-            <Link
-              to="/a-propos"
-              className="inline-flex items-center gap-2 gradient-red-text font-bold text-lg hover:underline"
-            >
-              Découvrir nos engagements
-              <ChevronRight className="w-5 h-5 text-primary" />
-            </Link>
+            <div className="relative rounded-3xl overflow-hidden h-full min-h-[400px]">
+              <img
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+                alt="Cuisine rénovée KF Services"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 flex flex-wrap gap-2">
+                {services.map((s) => (
+                  <span
+                    key={s.label}
+                    className="inline-flex items-center px-4 py-2 bg-foreground/80 backdrop-blur-sm text-background text-sm font-medium rounded-full"
+                  >
+                    {s.label}
+                  </span>
+                ))}
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* Services Overview - 4 cards with gradient headers */}
       <ParallaxSection className="bg-muted py-16 md:py-24" speed={0.1}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">Tous vos travaux, un seul partenaire</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Des solutions concrètes pour <span className="gradient-red-text">chaque besoin</span></h2>
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mb-12">
-              Vous évitez la multiplication des artisans et les retards : KF Services coordonne tous les corps de métier pour que votre projet avance vite, bien, et dans votre budget.
-            </p>
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              <div>
+                <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">Tous vos travaux, un seul partenaire</p>
+                <h2 className="text-3xl md:text-5xl font-bold">Des solutions concrètes pour <span className="gradient-red-text">chaque besoin</span></h2>
+              </div>
+              <div className="flex items-end">
+                <p className="text-muted-foreground text-base md:text-lg">
+                  Vous évitez la multiplication des artisans et les retards : KF Services coordonne tous les corps de métier pour que votre projet avance vite, bien, et dans votre budget.
+                </p>
+              </div>
+            </div>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceCards.map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ y: -5, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.1)" }}
-                  className="bg-background rounded-3xl p-7 shadow-sm"
+                  whileHover={{ y: -5, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.15)" }}
+                  className="bg-background rounded-3xl overflow-hidden shadow-sm h-full flex flex-col"
                 >
-                  <h3 className="text-xl md:text-2xl font-bold mb-4">{card.title}</h3>
-                  <ul className="space-y-3">
-                    {card.benefits.map((b, j) => (
-                      <li key={j} className="flex items-start gap-3 text-base text-muted-foreground">
-                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Gradient red header */}
+                  <div className="gradient-red p-6 pb-5">
+                    <card.icon className="w-8 h-8 text-white/80 mb-3" />
+                    <h3 className="text-white text-lg font-bold leading-tight">{card.title}</h3>
+                    {card.subtitle && (
+                      <p className="text-white/70 text-sm font-medium mt-1">{card.subtitle}</p>
+                    )}
+                  </div>
+                  {/* Benefits */}
+                  <div className="p-6 flex-1">
+                    <ul className="space-y-3">
+                      {card.benefits.map((b, j) => (
+                        <li key={j} className="flex items-start gap-3 text-sm text-muted-foreground">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
               </ScrollReveal>
             ))}
@@ -323,52 +388,41 @@ const Home = () => {
         </div>
       </ParallaxSection>
 
-      {/* Trust */}
+      {/* Trust - Split card */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <ScrollReveal>
-          <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">Pourquoi nos clients nous font confiance</p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12">Rénovez sereinement, <span className="gradient-red-text">on s'occupe de tout</span></h2>
+          <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2 text-center">Pourquoi nos clients nous font confiance</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
+            <span className="gradient-red-text">Rénovez sereinement,</span> on s'occupe de tout
+          </h2>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          <ScrollReveal direction="left">
-            <div className="bg-muted rounded-3xl p-8 md:p-10 h-full">
-              <p className="gradient-red-text text-sm font-bold uppercase tracking-wider mb-2">Votre projet, simplifié</p>
-              <h3 className="text-xl md:text-2xl font-bold mb-3">Un plan clair dès le départ</h3>
-              <p className="text-muted-foreground text-base md:text-lg mb-6">
-                Vous obtenez une vision complète de votre projet avant le premier coup de pioche : choix des matériaux, planning détaillé et estimation précise.
-              </p>
-              <KFButton to="/contact" variant="dark">
-                Obtenir mon devis gratuit
-              </KFButton>
+        {/* Big split card */}
+        <ScrollReveal>
+          <div className="rounded-3xl overflow-hidden mb-12">
+            <div className="grid lg:grid-cols-2">
+              <div className="gradient-red p-10 md:p-14 flex flex-col justify-end min-h-[400px]">
+                <p className="text-white/70 text-sm font-bold uppercase tracking-wider mb-3">Votre projet, simplifié</p>
+                <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">Un plan clair dès le départ</h3>
+                <p className="text-white/80 text-base md:text-lg mb-8">
+                  Vous obtenez une vision complète de votre projet avant le premier coup de pioche : choix des matériaux, planning détaillé et estimation précise. Vous savez exactement où vous allez.
+                </p>
+                <div>
+                  <KFButton to="/contact" variant="light">
+                    Obtenir mon devis gratuit
+                  </KFButton>
+                </div>
+              </div>
+              <div className="relative min-h-[300px]">
+                <img
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
+                  alt="Consultation chantier"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
             </div>
-          </ScrollReveal>
-          <ScrollReveal direction="right">
-            <div className="rounded-3xl overflow-hidden h-full">
-              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="Consultation" className="w-full h-full object-cover min-h-[300px]" />
-            </div>
-          </ScrollReveal>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          <ScrollReveal direction="left">
-            <div className="bg-muted rounded-3xl p-8 md:p-10 h-full">
-              <p className="gradient-red-text text-sm font-bold uppercase tracking-wider mb-2">Votre budget, respecté</p>
-              <h3 className="text-xl md:text-2xl font-bold mb-3">Aucune surprise sur la facture</h3>
-              <p className="text-muted-foreground text-base md:text-lg mb-6">
-                Vous recevez un devis détaillé ligne par ligne, avec un calendrier réaliste. Chaque dépense est justifiée.
-              </p>
-              <KFButton to="/contact" variant="dark">
-                Obtenir mon devis gratuit
-              </KFButton>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal direction="right">
-            <div className="rounded-3xl overflow-hidden h-full">
-              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Budget" className="w-full h-full object-cover min-h-[300px]" />
-            </div>
-          </ScrollReveal>
-        </div>
+          </div>
+        </ScrollReveal>
 
         {/* Guarantees */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
