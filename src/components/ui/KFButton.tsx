@@ -20,7 +20,7 @@ const KFButton = ({ to, children, variant = "gradient", className = "", external
     outline: "border border-border text-foreground hover:bg-[image:linear-gradient(135deg,hsl(0_78%_55%),hsl(0_78%_35%))] hover:text-white hover:border-transparent hover:shadow-[0_8px_25px_-5px_hsl(0_78%_45%/0.4)]",
   };
 
-  const iconColor = variant === "light" ? "text-foreground" : variant === "outline" ? "text-foreground" : "";
+  const iconColor = variant === "light" ? "text-foreground group-hover:text-white" : "";
 
   const content = (
     <>
