@@ -15,7 +15,7 @@ const KFButton = ({ to, children, variant = "gradient", className = "", external
 
   const variantClasses = {
     gradient: "btn-gradient",
-    dark: "bg-foreground text-background hover:bg-foreground/90",
+    dark: "bg-foreground text-background hover:bg-[image:linear-gradient(135deg,hsl(0_78%_55%),hsl(0_78%_35%))] hover:shadow-[0_8px_25px_-5px_hsl(0_78%_45%/0.4)]",
     light: "btn-light",
     outline: "border-2 border-border text-foreground hover:bg-muted",
   };
