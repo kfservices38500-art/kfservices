@@ -160,7 +160,7 @@ const Home = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="text-muted-foreground text-lg mb-4">
-              Depuis 2003, <span className="font-bold text-foreground">KF Services</span> vous accompagne pour que vos projets de construction et rénovation se réalisent sereinement.
+              Fort de plus de 20 ans d'expertise dans le bâtiment, <span className="font-bold text-foreground">KF Services</span> vous accompagne pour que vos projets de construction et rénovation se réalisent sereinement.
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
               Votre maison plus solide,{" "}
