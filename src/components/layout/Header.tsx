@@ -91,8 +91,8 @@ const Header = () => {
 
           {/* CTA - phone + dark contact button */}
           <div className="hidden md:flex items-center gap-5">
-            <a href="tel:+33123456789" className="flex items-center gap-2.5 px-5 py-2.5 rounded-full text-base font-bold text-foreground bg-muted hover:bg-primary hover:text-white transition-all duration-300 group">
-              <Phone className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-300" />
+            <a href="tel:+33123456789" className="flex items-center gap-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Phone className="w-5 h-5 text-primary" />
               01 23 45 67 89
             </a>
             <Link
