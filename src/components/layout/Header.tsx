@@ -41,8 +41,7 @@ const Header = () => {
             <img
               src={logoKF}
               alt="KF Services"
-              className="h-10 md:h-12 w-auto transition-all duration-300"
-              style={{ filter: scrolled ? "none" : "none" }}
+              className="h-14 md:h-[4.5rem] w-auto transition-all duration-300"
             />
           </Link>
 
@@ -86,7 +85,7 @@ const Header = () => {
               to="/contact"
               className="inline-flex items-center gap-2 bg-foreground text-background px-7 py-3 rounded-full text-base font-semibold hover:bg-foreground/90 transition-all duration-300 group"
             >
-              Contact
+              Devis gratuit
               <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
