@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, ArrowUpRight, ArrowRight, Menu, X } from "lucide-react";
+import { Phone, ArrowUpRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -48,38 +48,42 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1 bg-muted/60 backdrop-blur-md rounded-full px-2 py-1.5">
+          {/* Desktop Nav - pill style with underline active */}
+          <nav className="hidden md:flex items-center bg-white/60 backdrop-blur-md rounded-full px-2 py-1.5 shadow-sm border border-border/40">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className={`px-5 py-2.5 rounded-full text-base font-medium transition-all duration-300 ${
+                className={`relative px-5 py-2.5 rounded-full text-base font-semibold transition-all duration-300 ${
                   location.pathname === link.to
-                    ? "gradient-red text-white shadow-md"
-                    : "text-muted-foreground hover:text-foreground hover:bg-background/80"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.label}
+                {location.pathname === link.to && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute bottom-1 left-5 right-5 h-[3px] bg-foreground rounded-full"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
               </Link>
             ))}
           </nav>
 
-          {/* CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* CTA - phone + dark contact button */}
+          <div className="hidden md:flex items-center gap-5">
             <a href="tel:+33123456789" className="flex items-center gap-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors">
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5 text-primary" />
               01 23 45 67 89
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 btn-gradient px-6 py-3 rounded-full text-base font-semibold group"
+              className="inline-flex items-center gap-2 bg-foreground text-background px-7 py-3 rounded-full text-base font-semibold hover:bg-foreground/90 transition-all duration-300 group"
             >
               Contact
-              <span className="relative w-5 h-5">
-                <ArrowUpRight className="w-5 h-5 absolute inset-0 transition-all duration-300 group-hover:opacity-0" />
-                <ArrowRight className="w-5 h-5 absolute inset-0 opacity-0 transition-all duration-300 group-hover:opacity-100" />
-              </span>
+              <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 
@@ -116,7 +120,7 @@ const Header = () => {
                     onClick={() => setMobileOpen(false)}
                     className={`block px-5 py-4 rounded-2xl text-lg font-semibold transition-all ${
                       location.pathname === link.to
-                        ? "gradient-red text-white"
+                        ? "bg-foreground text-background"
                         : "text-muted-foreground hover:bg-muted"
                     }`}
                   >
@@ -131,7 +135,7 @@ const Header = () => {
                 transition={{ delay: 0.3 }}
                 className="flex items-center gap-3 px-5 py-4 text-lg text-muted-foreground"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 text-primary" />
                 01 23 45 67 89
               </motion.a>
             </nav>
