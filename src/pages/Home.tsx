@@ -642,16 +642,18 @@ const Home = () => {
 
       {/* Contact Form */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <ScrollReveal>
-          <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">C'est simple et rapide</p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Décrivez votre projet, <span className="gradient-red-text">on s'occupe du reste</span></h2>
-          <p className="text-muted-foreground text-base md:text-lg mb-12 max-w-2xl">
-            Remplissez ce formulaire en 2 minutes. Vous recevrez un appel sous 48h pour planifier une visite gratuite et obtenir votre devis détaillé.
-          </p>
-        </ScrollReveal>
-        <ScrollReveal delay={0.2}>
-          <ContactForm />
-        </ScrollReveal>
+        <div className="max-w-2xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">C'est simple et rapide</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Décrivez votre projet, <span className="gradient-red-text">on s'occupe du reste</span></h2>
+            <p className="text-muted-foreground text-base md:text-lg mb-12">
+              Remplissez ce formulaire en 2 minutes. Vous recevrez un appel sous 48h pour planifier une visite gratuite et obtenir votre devis détaillé.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <ContactForm />
+          </ScrollReveal>
+        </div>
       </section>
 
       {/* Map / Coverage + Google Maps */}

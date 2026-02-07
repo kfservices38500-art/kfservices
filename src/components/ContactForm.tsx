@@ -27,7 +27,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl bg-background">
+    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-background text-left">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <div>
           <label className="block text-base font-semibold mb-2">Prénom *</label>
