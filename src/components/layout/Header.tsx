@@ -37,11 +37,25 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center group relative">
+            {/* Default black logo */}
             <img
               src={logoKF}
               alt="KF Services"
-              className="h-14 md:h-[4.5rem] w-auto transition-all duration-300"
+              className="h-14 md:h-[4.5rem] w-auto transition-opacity duration-500 group-hover:opacity-0"
+            />
+            {/* Gradient logo on hover */}
+            <div
+              className="absolute inset-0 h-14 md:h-[4.5rem] w-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{
+                WebkitMaskImage: `url(${logoKF})`,
+                maskImage: `url(${logoKF})`,
+                WebkitMaskRepeat: 'no-repeat',
+                maskRepeat: 'no-repeat',
+                WebkitMaskSize: 'contain',
+                maskSize: 'contain',
+                background: 'linear-gradient(135deg, hsl(0 78% 55%), hsl(0 78% 35%))',
+              }}
             />
           </Link>
 
