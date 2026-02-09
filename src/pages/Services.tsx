@@ -34,7 +34,7 @@ const servicesData = [{
 }, {
   title: "Construction neuve & Rénovation globale",
   emoji: "🏗️",
-  description: "Vous confiez l'ensemble de votre projet à un seul interlocuteur. De la conception à la livraison, vous évitez la complexité et gagnez du temps, de l'argent et de la tranquillité.",
+  description: "Évitez la complexité et gagnez du temps, de l'argent et de la tranquillité en confiant l'ensemble de votre projet à un seul interlocuteur de la conception à la livraison.",
   benefits: ["Une maison neuve clé en main, conforme à vos plans et à votre budget", "Une rénovation complète qui transforme votre intérieur sans tracas", "Une transformation de locaux adaptée à votre nouveau besoin", "Une mise en conformité qui protège votre bien et ses occupants", "Une coordination de tous les corps de métier — zéro stress pour vous", "Un suivi de chantier régulier pour que vous restiez informé à chaque étape"],
   image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
   category: "neuf-renovation"
