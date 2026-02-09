@@ -47,7 +47,7 @@ const timeline = [{
 const values = [{
   icon: Target,
   title: "Résultat garanti",
-  desc: "Vous obtenez un chantier soigné dans les moindres détails, conforme à vos attentes."
+  desc: "Votre chantier soigné dans les moindres détails, conforme à vos attentes."
 }, {
   icon: Heart,
   title: "Engagement total",
