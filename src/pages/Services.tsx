@@ -104,7 +104,7 @@ const Services = () => {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Vous avez un projet ? Parlons-en.</h2>
-            <p className="text-white/70 text-base md:text-lg mb-8">En 48h, vous recevez un appel et un rendez-vous pour une visite gratuite sur site.</p>
+            <p className="text-white/70 text-base md:text-lg mb-8">En 48h, nous vous contactons pour un rendez-vous pour une visite gratuite sur site.</p>
             <KFButton to="/contact" variant="light">
               Obtenir mon devis gratuit
             </KFButton>
