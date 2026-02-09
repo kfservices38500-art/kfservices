@@ -13,7 +13,7 @@ const servicesData = [{
 }, {
   title: "Charpente & Couverture",
   emoji: "🏠",
-  description: "Vous êtes protégé des intempéries pour les 30 prochaines années. Notre expertise en charpente traditionnelle et couverture vous garantit une toiture étanche, isolée et durable.",
+  description: "Vous êtes protégé pour les 30 prochaines années. Notre expertise en charpente traditionnelle et couverture vous garantit une toiture étanche, isolée et durable.",
   benefits: ["Une charpente en bois massif qui résiste au temps et aux contraintes", "Une couverture étanche qui élimine tout risque d'infiltration", "Une rénovation complète qui redonne sa solidité à votre toit", "Une isolation par l'extérieur qui réduit vos factures d'énergie", "Une zinguerie soignée qui protège vos murs des eaux de ruissellement", "Des fenêtres de toit qui apportent lumière et ventilation naturelle"],
   image: "https://images.unsplash.com/photo-1632759145905-98a82e3776a6?w=800&q=80",
   category: "charpente"
