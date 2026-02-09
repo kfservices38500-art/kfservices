@@ -1,30 +1,29 @@
 import { Link } from "react-router-dom";
-import { Shield, FileCheck, Award, Scale, Target, Heart, Eye, Users, Handshake, Home, HardHat, Star } from "lucide-react";
+import { Shield, FileCheck, Award, Scale, Target, Heart, Eye, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollReveal from "../components/animations/ScrollReveal";
 import ParallaxSection from "../components/animations/ParallaxSection";
 import KFButton from "../components/ui/KFButton";
-const stats: { value: string; label: string; icon: any; renderIcon?: () => React.ReactNode }[] = [{
+import PoignetmainsIcon from "../assets/Poignetmains.svg";
+import ChantierIcon from "../assets/Chantier.svg";
+import WorkersIcon from "../assets/Workers.svg";
+import FiveStarsIcon from "../assets/5stars.svg";
+const stats = [{
   value: "20+",
   label: "Années à votre service",
-  icon: Handshake
+  icon: PoignetmainsIcon
 }, {
   value: "500+",
   label: "Projets livrés avec succès",
-  icon: Home
+  icon: ChantierIcon
 }, {
   value: "1",
   label: "Équipe dédiée à votre chantier",
-  icon: HardHat
+  icon: WorkersIcon
 }, {
   value: "98%",
   label: "De clients satisfaits",
-  icon: Star,
-  renderIcon: () => (
-    <div className="flex gap-1 justify-center mb-2">
-      {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 text-white/80 fill-white/80" />)}
-    </div>
-  )
+  icon: FiveStarsIcon
 }];
 const timeline = [{
   year: "2003",
@@ -104,7 +103,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, i) => <ScrollReveal key={stat.label} delay={i * 0.1}>
-                {stat.renderIcon ? stat.renderIcon() : <stat.icon className="w-8 h-8 text-white/80 mx-auto mb-2" />}
+                <img src={stat.icon} alt={stat.label} className="w-10 h-10 mx-auto mb-2 brightness-0 invert opacity-80" />
                 <span className="text-4xl md:text-5xl font-black text-white">{stat.value}</span>
                 <p className="text-base text-white/70 mt-1">{stat.label}</p>
               </ScrollReveal>)}
