@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { MapPin } from "lucide-react";
+import { MapPin, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "../components/animations/ScrollReveal";
 import KFButton from "../components/ui/KFButton";
@@ -150,6 +150,15 @@ const Realisations = () => {
                 ← Voir tous les projets
               </Link>
             )}
+
+            <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-2">Jugez par vous-même.</h2>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="mt-4"
+            >
+              <ChevronDown className="w-8 h-8 text-muted-foreground mx-auto" />
+            </motion.div>
           </motion.div>
         </div>
       </section>
