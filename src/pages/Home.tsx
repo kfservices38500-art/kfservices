@@ -80,7 +80,7 @@ const serviceCards = [
       "Un chauffage performant pour une chaleur homogène dans toute la maison",
       "Des économies d'énergie avec une pompe à chaleur adaptée",
       "Un air sain grâce à une VMC bien dimensionnée",
-      "Un dépannage rapide pour éviter les dégâts",
+      "Un dépannage rapide",
     ],
   },
   {
