@@ -590,38 +590,27 @@ const Home = () => {
             <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">Toujours en mouvement</p>
             <h2 className="text-3xl md:text-5xl font-bold mb-12">Suivez nos <span className="gradient-red-text">avancées</span></h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-8">
-            <ScrollReveal direction="left">
-              <h3 className="text-xl font-bold mb-6">Visitez nos chantiers terminés</h3>
-              <div className="space-y-4">
-                <motion.div whileHover={{ y: -3 }} className="bg-background rounded-3xl p-6">
-                  <p className="text-sm text-muted-foreground mb-1">15 Février 2025</p>
-                  <h4 className="font-bold text-base mb-1">Voiron</h4>
-                  <p className="text-base text-muted-foreground mb-3">Rénovation maison — venez juger par vous-même</p>
-                  <Link to="/contact" className="gradient-red-text text-base font-bold hover:underline">Réserver ma visite →</Link>
-                </motion.div>
-                <motion.div whileHover={{ y: -3 }} className="bg-background rounded-3xl p-6">
-                  <p className="text-sm text-muted-foreground mb-1">22 Février 2025</p>
-                  <h4 className="font-bold text-base mb-1">Grenoble</h4>
-                  <p className="text-base text-muted-foreground mb-3">Extension + Toiture — voyez le résultat en vrai</p>
-                  <Link to="/contact" className="gradient-red-text text-base font-bold hover:underline">Réserver ma visite →</Link>
-                </motion.div>
-              </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ScrollReveal>
+              <motion.div whileHover={{ y: -3 }} className="bg-background rounded-3xl p-6">
+                <p className="text-sm text-muted-foreground mb-1">10 Janvier 2025</p>
+                <h4 className="font-bold text-base mb-1">Nouveau projet livré à Moirans</h4>
+                <p className="text-base text-muted-foreground">Une maison de ville entièrement rénovée : les propriétaires ont gagné 30 m² de surface habitable.</p>
+              </motion.div>
             </ScrollReveal>
-            <ScrollReveal direction="right">
-              <h3 className="text-xl font-bold mb-6">Dernières réalisations</h3>
-              <div className="space-y-4">
-                <motion.div whileHover={{ y: -3 }} className="bg-background rounded-3xl p-6">
-                  <p className="text-sm text-muted-foreground mb-1">10 Janvier 2025</p>
-                  <h4 className="font-bold text-base mb-1">Nouveau projet livré à Moirans</h4>
-                  <p className="text-base text-muted-foreground">Une maison de ville entièrement rénovée : les propriétaires ont gagné 30 m² de surface habitable.</p>
-                </motion.div>
-                <motion.div whileHover={{ y: -3 }} className="bg-background rounded-3xl p-6">
-                  <p className="text-sm text-muted-foreground mb-1">5 Janvier 2025</p>
-                  <h4 className="font-bold text-base mb-1">Extension livrée à Voiron</h4>
-                  <p className="text-base text-muted-foreground">30 m² supplémentaires pour une famille qui avait besoin d'espace — chantier livré en 8 semaines.</p>
-                </motion.div>
-              </div>
+            <ScrollReveal>
+              <motion.div whileHover={{ y: -3 }} className="bg-background rounded-3xl p-6">
+                <p className="text-sm text-muted-foreground mb-1">5 Janvier 2025</p>
+                <h4 className="font-bold text-base mb-1">Extension livrée à Voiron</h4>
+                <p className="text-base text-muted-foreground">30 m² supplémentaires pour une famille qui avait besoin d'espace — chantier livré en 8 semaines.</p>
+              </motion.div>
+            </ScrollReveal>
+            <ScrollReveal>
+              <motion.div whileHover={{ y: -3 }} className="bg-background rounded-3xl p-6">
+                <p className="text-sm text-muted-foreground mb-1">15 Décembre 2024</p>
+                <h4 className="font-bold text-base mb-1">Toiture rénovée à Grenoble</h4>
+                <p className="text-base text-muted-foreground">Charpente et couverture complètes pour une maison des années 60 — étanchéité garantie.</p>
+              </motion.div>
             </ScrollReveal>
           </div>
         </div>
