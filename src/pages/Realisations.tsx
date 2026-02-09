@@ -144,7 +144,7 @@ const Realisations = () => {
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
               {deptFilter
                 ? `Découvrez nos chantiers réalisés dans le département ${deptNames[deptFilter] || deptFilter}.`
-                : "Chaque projet ci-dessous est un client qui a retrouvé confort, sécurité ou valeur immobilière."}
+                : "Chaque projet ci-dessous est un client qui a retrouvé satisfaction, sécurité, confort, + valeur immobilière."}
             </p>
             {deptFilter && (
               <Link to="/realisations" className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
