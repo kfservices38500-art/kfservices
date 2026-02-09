@@ -43,7 +43,7 @@ const serviceCards = [
   {
     icon: Hammer,
     title: "MAÇONNERIE",
-    subtitle: "",
+    subtitle: "SOLIDITÉ & DURABILITÉ",
     benefits: [
       "Des fondations et murs solides pour un bâti durable",
       "Des extensions qui valorisent votre bien immobilier",
@@ -53,7 +53,7 @@ const serviceCards = [
   {
     icon: HomeIcon,
     title: "CHARPENTE & COUVERTURE",
-    subtitle: "",
+    subtitle: "PROTECTION & ISOLATION",
     benefits: [
       "Une toiture étanche qui vous protège des intempéries",
       "Une isolation performante qui réduit vos factures d'énergie",
@@ -64,7 +64,7 @@ const serviceCards = [
   {
     icon: Droplets,
     title: "GOUTTIÈRES ALUMINIUM",
-    subtitle: "",
+    subtitle: "ÉVACUATION & ÉTANCHÉITÉ",
     benefits: [
       "Des gouttières sur mesure intégrées à votre toiture",
       "Des raccordements étanches qui éliminent les fuites",
