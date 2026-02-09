@@ -59,7 +59,7 @@ const values = [{
 }, {
   icon: Users,
   title: "Un seul interlocuteur",
-  desc: "Vous évitez de jongler entre plusieurs artisans : on coordonne tout pour vous."
+  desc: "Nous coordonnons tous pour vous. Fini le casse-tête, un projet bien réalisé c'est avant tout un chantier serein."
 }];
 const certifications = [{
   icon: Shield,
