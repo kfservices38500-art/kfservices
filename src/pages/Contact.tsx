@@ -42,12 +42,19 @@ const Contact = () => {
             scale: 0.8
           }} animate={{
             opacity: 1,
-            scale: 1
+            scale: 1,
+            y: [0, -12, 0]
           }} transition={{
             duration: 0.8,
-            delay: 0.2
+            delay: 0.2,
+            y: {
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }
           }} className="hidden lg:block flex-shrink-0">
-              <img src={contactIcon} alt="Contact" className="w-[500px] h-[500px] object-contain" />
+              <img src={contactIcon} alt="Contact" className="w-[500px] h-[500px] object-contain brightness-0 invert" />
             </motion.div>
           </div>
         </div>
