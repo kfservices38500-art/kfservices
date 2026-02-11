@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Clock, CalendarCheck, FileText, Shield } from "luc
 import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 import ScrollReveal from "../components/animations/ScrollReveal";
-import contactSvg from "@/assets/contact.svg";
+import contactIcon from "@/assets/contact-icon.svg";
 const Contact = () => {
   return <div>
       {/* Hero */}
@@ -46,19 +46,9 @@ const Contact = () => {
           }} transition={{
             duration: 0.8,
             delay: 0.2
-          }} className="hidden lg:block flex-shrink-0" style={{
-            width: '500px',
-            height: '500px',
-            WebkitMaskImage: `url(${contactSvg})`,
-            maskImage: `url(${contactSvg})`,
-            WebkitMaskRepeat: 'no-repeat',
-            maskRepeat: 'no-repeat',
-            WebkitMaskSize: 'contain',
-            maskSize: 'contain',
-            WebkitMaskPosition: 'center',
-            maskPosition: 'center',
-            background: 'white'
-          }} />
+          }} className="hidden lg:block flex-shrink-0">
+              <img src={contactIcon} alt="Contact" className="w-[500px] h-[500px] object-contain" />
+            </motion.div>
           </div>
         </div>
       </section>
