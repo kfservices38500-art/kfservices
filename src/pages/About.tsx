@@ -17,7 +17,7 @@ const stats = [{
   label: "Projets livrés avec succès\ndepuis 2003",
   icon: ChantierIcon
 }, {
-  value: "1",
+  value: "+\n50",
   label: "Déjà livrés par\nKF Services depuis 2022",
   icon: WorkersIcon
 }, {
