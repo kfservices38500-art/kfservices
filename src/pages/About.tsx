@@ -18,7 +18,7 @@ const stats = [{
   icon: ChantierIcon
 }, {
   value: "+\n50",
-  label: "Déjà livrés par\nKF Services depuis 2022",
+  label: "Projets déjà livrés par\nKF Services depuis 2022",
   icon: WorkersIcon
 }, {
   value: "98%",
