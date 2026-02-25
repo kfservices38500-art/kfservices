@@ -285,63 +285,98 @@ const StatsCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setActive(prev => (prev + 1) % total);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [total]);
 
   return (
-    <section className="gradient-red text-white overflow-visible relative py-12 md:py-16">
-      <div className="max-w-5xl mx-auto px-4 relative" style={{ height: "220px" }}>
-        {homeStats.map((stat, i) => (
-          <motion.div
-            key={stat.label}
-            initial={false}
-            animate={{
-              opacity: i === active ? 1 : 0,
-              x: i === active ? 0 : 60,
-              filter: i === active ? "blur(0px)" : "blur(8px)",
-            }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-0 flex flex-row items-center justify-center gap-10 md:gap-16 px-16"
-            style={{ pointerEvents: i === active ? "auto" : "none" }}
-          >
-            <motion.img
-              src={stat.icon}
-              alt={stat.label}
-              className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] brightness-0 invert opacity-90 flex-shrink-0"
-              animate={{ rotate: i === active ? [0, -3, 3, 0] : 0 }}
-              transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
-            />
-            <div className="text-left flex flex-col justify-center">
+    <section className="gradient-red text-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        {/* Top row: all 3 icons as tabs */}
+        <div className="flex items-center justify-center gap-6 md:gap-12 mb-12">
+          {homeStats.map((stat, i) => (
+            <motion.button
+              key={stat.label}
+              onClick={() => setActive(i)}
+              className="relative flex flex-col items-center gap-2 group cursor-pointer"
+              animate={{
+                scale: i === active ? 1 : 0.7,
+                opacity: i === active ? 1 : 0.35,
+              }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ opacity: 0.8, scale: 0.85 }}
+            >
+              <motion.img
+                src={stat.icon}
+                alt={stat.label}
+                className="w-[80px] h-[80px] md:w-[120px] md:h-[120px] brightness-0 invert"
+                animate={i === active ? { 
+                  y: [0, -8, 0],
+                } : {}}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              />
+              {/* Active indicator line */}
+              <motion.div
+                className="h-[3px] rounded-full bg-white"
+                animate={{ width: i === active ? 60 : 0, opacity: i === active ? 1 : 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              />
+            </motion.button>
+          ))}
+        </div>
+
+        {/* Bottom: animated stat content */}
+        <div className="relative h-[140px] md:h-[160px]">
+          {homeStats.map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={false}
+              animate={{
+                opacity: i === active ? 1 : 0,
+                y: i === active ? 0 : 30,
+                scale: i === active ? 1 : 0.95,
+              }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute inset-0 flex flex-col items-center justify-center text-center"
+              style={{ pointerEvents: i === active ? "auto" : "none" }}
+            >
               <motion.span
-                className="text-5xl md:text-7xl lg:text-8xl font-black text-white whitespace-pre-line leading-none block"
-                animate={{ scale: i === active ? [0.9, 1.05, 1] : 0.9 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+                className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-none block tracking-tight"
+                animate={i === active ? { 
+                  scale: [0.8, 1.02, 1],
+                  opacity: [0, 1, 1],
+                } : { scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                {stat.value}
+                {stat.value.replace("\n", " ")}
               </motion.span>
               <motion.p
-                className="text-base md:text-xl text-white/70 mt-2 whitespace-pre-line font-medium"
-                animate={{ opacity: i === active ? 1 : 0, y: i === active ? 0 : 15 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-lg md:text-2xl text-white/60 mt-3 font-medium tracking-wide"
+                animate={i === active ? { 
+                  opacity: [0, 1],
+                  y: [15, 0],
+                } : { opacity: 0, y: 15 }}
+                transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
               >
-                {stat.label}
+                {stat.label.replace("\n", " ")}
               </motion.p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-      {/* Navigation dots - vertical, right side */}
-      <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10">
-        {homeStats.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setActive(i)}
-            className={`w-3 rounded-full transition-all duration-500 ${
-              i === active ? "h-10 bg-white" : "h-3 bg-white/30 hover:bg-white/50"
-            }`}
-          />
-        ))}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Progress bar */}
+        <div className="flex gap-2 justify-center mt-10">
+          {homeStats.map((_, i) => (
+            <button key={i} onClick={() => setActive(i)} className="h-1.5 rounded-full overflow-hidden bg-white/20 w-16 md:w-24">
+              <motion.div
+                className="h-full bg-white rounded-full"
+                initial={{ width: "0%" }}
+                animate={{ width: i === active ? "100%" : "0%" }}
+                transition={i === active ? { duration: 5, ease: "linear" } : { duration: 0.3 }}
+              />
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );
