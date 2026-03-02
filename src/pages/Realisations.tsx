@@ -42,6 +42,16 @@ import realStPaulIzeaux2 from "../assets/real-stpaulizeaux-2.jpeg";
 import realStPaulIzeaux3 from "../assets/real-stpaulizeaux-3.jpeg";
 import realStPaulIzeaux4 from "../assets/real-stpaulizeaux-4.jpeg";
 import realStPaulIzeaux5 from "../assets/real-stpaulizeaux-5.jpeg";
+import realSassenage1 from "../assets/real-sassenage-1.jpeg";
+import realSassenage2 from "../assets/real-sassenage-2.jpeg";
+import realSassenage3 from "../assets/real-sassenage-3.jpeg";
+import realSassenage4 from "../assets/real-sassenage-4.jpeg";
+import realSassenage5 from "../assets/real-sassenage-5.jpeg";
+import realSassenage6 from "../assets/real-sassenage-6.jpeg";
+import realSassenage7 from "../assets/real-sassenage-7.jpeg";
+import realSassenage8 from "../assets/real-sassenage-8.jpeg";
+import realSassenage9 from "../assets/real-sassenage-9.jpeg";
+import realSassenage10 from "../assets/real-sassenage-10.jpeg";
 const deptNames: Record<string, string> = {
   "01": "Ain",
   "03": "Allier",
@@ -121,6 +131,13 @@ const projects = [{
   title: "Piscine à débordement en béton armé",
   location: "Saint-Paul-d'Izeaux (38)",
   description: "Construction d'une piscine à débordement en béton armé, du terrassement au coulage du radier et élévation des murs en parpaings avec local technique intégré."
+}, {
+  images: [realSassenage9, realSassenage10, realSassenage1, realSassenage2, realSassenage4, realSassenage3, realSassenage5, realSassenage6, realSassenage7, realSassenage8],
+  category: ["maconnerie", "autres"],
+  categoryLabel: "Rénovation & Gros œuvre",
+  title: "Ouvertures en sous-œuvre et mezzanine bois dans bâtiment en pierres",
+  location: "Sassenage (38)",
+  description: "Création de deux ouvertures en sous-œuvre dans un mur en pierres, coulage d'une dalle béton armé et construction d'une mezzanine en structure bois pour réhabiliter un bâtiment ancien."
 }, {
   images: ["https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80", "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80", "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"],
   category: ["plomberie"],
