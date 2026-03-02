@@ -13,14 +13,23 @@ import PoignetmainsIcon from "../assets/Poignetmains.svg";
 import ChantierIcon from "../assets/Chantier.svg";
 import WorkersIcon from "../assets/Workers.svg";
 const heroImages = [{
-  src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80",
-  alt: "Votre maison plus solide"
+  src: "/images/hero-1.jpeg",
+  alt: "Maçonnerie et gros œuvre – piscine béton"
 }, {
-  src: "https://images.unsplash.com/photo-1635424710928-0544e8512eae?w=1920&q=80",
-  alt: "Une toiture qui vous protège"
+  src: "/images/hero-2.jpeg",
+  alt: "Charpente – fermettes bois"
 }, {
-  src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80",
-  alt: "Un confort thermique optimal"
+  src: "/images/hero-3.jpeg",
+  alt: "Maçonnerie – dalle béton"
+}, {
+  src: "/images/hero-4.jpeg",
+  alt: "Carport bois avec claustra"
+}, {
+  src: "/images/hero-5.jpeg",
+  alt: "Rénovation façade pierre"
+}, {
+  src: "/images/hero-6.jpeg",
+  alt: "Rénovation intérieure – structure bois"
 }];
 const services = [{
   icon: Hammer,
