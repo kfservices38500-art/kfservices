@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 
 interface Project {
   images: string[];
-  category: string;
+  category: string[];
   categoryLabel: string;
   title: string;
   location: string;
