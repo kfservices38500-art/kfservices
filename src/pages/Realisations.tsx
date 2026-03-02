@@ -58,49 +58,49 @@ const categories = [{
 }];
 const projects = [{
   images: [realIzeauxMac4, realIzeauxMac5, realIzeauxMac1, realIzeauxMac2, realIzeauxMac3, realIzeauxMac6],
-  category: "maconnerie",
+  category: ["maconnerie"],
   categoryLabel: "Maçonnerie",
   title: "Terrassement et maçonnerie pour une construction neuve",
   location: "Izeaux (38)",
   description: "Du terrassement aux fondations jusqu'à l'élévation des murs : construction complète d'une maison individuelle en briques avec dalle béton armé."
 }, {
   images: [realMaubec6, realMaubec4, realMaubec5, realMaubec8, realMaubec1, realMaubec2, realMaubec3, realMaubec7, realMaubec9],
-  category: "maconnerie",
+  category: ["maconnerie", "charpente"],
   categoryLabel: "Maçonnerie & Charpente",
   title: "Construction complète : maçonnerie et charpente couverture",
   location: "Maubec (38)",
   description: "Élévation des murs en parpaings, pose de la charpente industrielle, couverture tuiles et finitions gouttières pour une maison neuve de plain-pied."
 }, {
   images: [realLaTroncheCharp1, realLaTroncheCharp2, realLaTroncheCharp3, realLaTroncheCharp4, realLaTroncheCharp5],
-  category: "charpente",
+  category: ["charpente"],
   categoryLabel: "Charpente/Couverture",
   title: "Un abri voiture en bois sur mesure, esthétique et durable",
   location: "La Tronche (38)",
   description: "Conception et réalisation d'un carport en charpente bois avec bardage à claire-voie, intégré à l'environnement de la maison."
 }, {
   images: ["https://images.unsplash.com/photo-1632759145905-98a82e3776a6?w=800&q=80", "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800&q=80", "https://images.unsplash.com/photo-1600566752734-2a0cd66c42f2?w=800&q=80"],
-  category: "charpente",
+  category: ["charpente"],
   categoryLabel: "Charpente/Couverture",
   title: "Une charpente en chêne qui traversera les générations",
   location: "Chambéry (73)",
   description: "Charpente traditionnelle massive pour une maison neuve."
 }, {
   images: ["https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80", "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80", "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"],
-  category: "plomberie",
+  category: ["plomberie"],
   categoryLabel: "Plomberie",
   title: "-40% sur la facture de chauffage grâce à une pompe à chaleur",
   location: "Annecy (74)",
   description: "Installation d'une PAC air/eau avec nouveaux radiateurs."
 }, {
   images: ["https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80", "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80", "https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80"],
-  category: "plomberie",
+  category: ["plomberie"],
   categoryLabel: "Plomberie",
   title: "Une salle de bain spa qui valorise l'appartement",
   location: "Lyon 6ème (69)",
   description: "Douche italienne, baignoire balnéo et finitions haut de gamme."
 }, {
   images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"],
-  category: "autres",
+  category: ["autres"],
   categoryLabel: "Gouttières",
   title: "Des gouttières alu qui protègent les façades pour 25 ans",
   location: "Tullins (38)",
@@ -113,7 +113,7 @@ const Realisations = () => {
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [selectedProject, setSelectedProject] = useState<typeof projects[number] | null>(null);
   const filteredProjects = (() => {
-    let filtered = activeCategory === "all" ? projects : projects.filter(p => p.category === activeCategory);
+    let filtered = activeCategory === "all" ? projects : projects.filter(p => p.category.includes(activeCategory));
     if (deptFilter) {
       filtered = filtered.filter(p => p.location.includes(`(${deptFilter})`));
     }
