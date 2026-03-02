@@ -31,6 +31,9 @@ import realRoybon2 from "../assets/real-roybon-2.jpeg";
 import realRoybon3 from "../assets/real-roybon-3.jpeg";
 import realRoybon4 from "../assets/real-roybon-4.jpeg";
 import realRoybon5 from "../assets/real-roybon-5.jpeg";
+import realSteCrossey1 from "../assets/real-stecrossey-1.jpeg";
+import realSteCrossey2 from "../assets/real-stecrossey-2.jpeg";
+import realSteCrossey3 from "../assets/real-stecrossey-3.jpeg";
 const deptNames: Record<string, string> = {
   "01": "Ain",
   "03": "Allier",
@@ -89,6 +92,13 @@ const projects = [{
   title: "Terrasses et ossatures bois pour une extension sur mesure",
   location: "Roybon (38)",
   description: "Création de terrasses surélevées et ossatures bois adossées à une maison existante, alliant structure porteuse et esthétique naturelle."
+}, {
+  images: [realSteCrossey2, realSteCrossey1, realSteCrossey3],
+  category: ["charpente", "autres"],
+  categoryLabel: "Charpente & Rénovation",
+  title: "Mezzanine en bois avec dalle de verre intégrée",
+  location: "Saint-Étienne-de-Crossey (38)",
+  description: "Création d'une mezzanine sur structure bois apparente avec insertion d'une dalle en verre pour apporter lumière naturelle entre les niveaux."
 }, {
   images: ["https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80", "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80", "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"],
   category: ["plomberie"],
