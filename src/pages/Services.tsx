@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import ScrollReveal from "../components/animations/ScrollReveal";
 import ParallaxSection from "../components/animations/ParallaxSection";
 import KFButton from "../components/ui/KFButton";
+import servicesMaconnerie from "../assets/services-maconnerie.jpg";
 const servicesData = [{
   title: "Maçonnerie",
   emoji: "🧱",
   description: "Vous bénéficiez de structures solides qui supportent vos projets sur le long terme. Murs, dalles et extensions sont conçus pour que votre maison reste stable, sûre et prête à évoluer avec vos besoins.",
   benefits: ["Des murs porteurs et cloisons qui garantissent la solidité de votre bâti", "Des fondations et dallages dimensionnés pour durer des décennies", "Des extensions qui ajoutent de l'espace et de la valeur à votre bien", "Une rénovation de façade qui redonne vie à votre extérieur", "Des ouvertures de murs réalisées en toute sécurité structurelle", "Des terrasses qui prolongent votre espace de vie à l'extérieur"],
-  image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+  image: servicesMaconnerie,
   category: "maconnerie"
 }, {
   title: "Charpente & Couverture",
