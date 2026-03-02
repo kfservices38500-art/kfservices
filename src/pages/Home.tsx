@@ -14,6 +14,7 @@ import ChantierIcon from "../assets/Chantier.svg";
 import WorkersIcon from "../assets/Workers.svg";
 import servicesMaconnerie from "../assets/services-maconnerie.jpg";
 import servicesCharpente from "../assets/services-charpente.jpg";
+import servicesGouttieres from "../assets/services-gouttieres.jpg";
 import hero1 from "../assets/hero-1.jpeg";
 import hero2 from "../assets/hero-2.jpeg";
 import hero3 from "../assets/hero-3.jpeg";
@@ -147,7 +148,7 @@ const portfolioItems = [{
   title: "Charpente & Couverture",
   desc: "Une toiture qui vous met à l'abri pour des décennies."
 }, {
-  img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&q=80",
+  img: servicesGouttieres,
   title: "Gouttières Aluminium",
   desc: "Des gouttières sur mesure qui protègent vos façades."
 }, {
