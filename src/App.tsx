@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import Realisations from "./pages/Realisations";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import CookieBanner from "./components/CookieBanner";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           </Routes>
         </main>
         <Footer />
+        <CookieBanner />
       </div>
     </BrowserRouter>
   );
