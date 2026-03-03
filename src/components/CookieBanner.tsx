@@ -43,7 +43,8 @@ const CookieBanner = () => {
                   🍪 Nous utilisons des cookies
                 </p>
                 <p className="text-xs text-background/65 leading-relaxed">
-                  Ce site utilise des cookies essentiels au fonctionnement et des cookies d'analyse pour améliorer votre expérience. Aucune donnée personnelle n'est revendue à des tiers. En cliquant sur « Accepter », vous consentez à l'utilisation de l'ensemble des cookies.
+                  Ce site utilise des cookies essentiels au fonctionnement. Aucune donnée personnelle n'est revendue à des tiers. Consultez notre{" "}
+                  <a href="/politique-confidentialite" className="underline hover:text-background transition-colors">politique de confidentialité</a>.
                 </p>
                 <div className="flex items-center gap-2 mt-3">
                   <button
