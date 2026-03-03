@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Send, Bot, User, Wrench, FileText, MapPin } from "lucide-react";
+import { X, Send, User, Wrench, FileText, MapPin } from "lucide-react";
+import chatbotIcon from "@/assets/chatbot-icon.png";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -118,7 +119,7 @@ const ChatBot = () => {
             onClick={() => setOpen(true)}
             className="fixed bottom-6 right-6 z-[9999] w-14 h-14 rounded-full btn-gradient shadow-[0_8px_25px_-5px_hsl(0_78%_45%/0.4)] flex items-center justify-center"
           >
-            <MessageCircle className="w-6 h-6 text-white" />
+            <img src={chatbotIcon} alt="Chat" className="w-8 h-8 rounded-full" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -136,7 +137,7 @@ const ChatBot = () => {
             {/* Header */}
             <div className="gradient-red px-4 py-3 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-2">
-                <Bot className="w-5 h-5 text-white" />
+                <img src={chatbotIcon} alt="Bot" className="w-6 h-6 rounded-full" />
                 <span className="text-white font-semibold text-sm">Assistant KF Services</span>
               </div>
               <button onClick={() => setOpen(false)} className="text-white/70 hover:text-white transition-colors">
@@ -149,8 +150,8 @@ const ChatBot = () => {
               {messages.map((msg, i) => (
                 <div key={i} className={`flex gap-2 ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                   {msg.role === "assistant" && (
-                    <div className="w-7 h-7 rounded-full gradient-red flex items-center justify-center shrink-0 mt-0.5">
-                      <Bot className="w-3.5 h-3.5 text-white" />
+                    <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 mt-0.5">
+                      <img src={chatbotIcon} alt="Bot" className="w-full h-full object-cover" />
                     </div>
                   )}
                   <div
@@ -171,8 +172,8 @@ const ChatBot = () => {
               ))}
               {isLoading && messages[messages.length - 1]?.role === "user" && (
                 <div className="flex gap-2 items-start">
-                  <div className="w-7 h-7 rounded-full gradient-red flex items-center justify-center shrink-0">
-                    <Bot className="w-3.5 h-3.5 text-white" />
+                  <div className="w-7 h-7 rounded-full overflow-hidden shrink-0">
+                    <img src={chatbotIcon} alt="Bot" className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-muted px-3.5 py-2.5 rounded-2xl rounded-bl-md">
                     <div className="flex gap-1">
