@@ -84,8 +84,12 @@ const Footer = () => {
           </div>
         </ScrollReveal>
 
-        <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-white/50">
-          © {new Date().getFullYear()} KF Services. Tous droits réservés.
+        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
+          <span>© {new Date().getFullYear()} KF Services. Tous droits réservés.</span>
+          <div className="flex items-center gap-4">
+            <Link to="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</Link>
+            <Link to="/politique-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</Link>
+          </div>
         </div>
       </div>
     </footer>

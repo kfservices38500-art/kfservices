@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Realisations from "./pages/Realisations";
 import Contact from "./pages/Contact";
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
 import CookieBanner from "./components/CookieBanner";
 import ChatBot from "./components/ChatBot";
@@ -24,6 +26,8 @@ const App = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/realisations" element={<Realisations />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
