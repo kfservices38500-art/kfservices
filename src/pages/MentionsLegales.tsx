@@ -40,9 +40,9 @@ const MentionsLegales = () => {
               <h2 className="text-lg font-semibold text-foreground mb-2">3. Hébergement</h2>
               <p>
                 Le site est hébergé par :<br />
-                <strong>GoDaddy</strong><br />
-                14455 N. Hayden Road, Suite 219, Scottsdale, AZ 85260, États-Unis<br />
-                Site web : <a href="https://www.godaddy.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.godaddy.com</a>
+                <strong>Hostinger International Ltd</strong><br />
+                61 Lordou Vironos Street, 6023 Larnaca, Chypre<br />
+                Site web : <a href="https://www.hostinger.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.hostinger.com</a>
               </p>
             </section>
 
