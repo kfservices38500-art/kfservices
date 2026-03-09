@@ -68,7 +68,14 @@ const MentionsLegales = () => {
             </section>
 
             <section>
-              <h2 className="text-lg font-semibold text-foreground mb-2">7. Droit applicable</h2>
+              <h2 className="text-lg font-semibold text-foreground mb-2">7. Conception du site</h2>
+              <p>
+                Ce site a été conçu et développé par <a href="https://novavisio.ch" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Nova Visio</a> (novavisio.ch).
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-foreground mb-2">8. Droit applicable</h2>
               <p>
                 Le présent site et ses mentions légales sont régis par le droit français. En cas de litige, les tribunaux français seront seuls compétents.
               </p>
