@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 
 const projectTypes = [
   "Maçonnerie",
@@ -63,10 +64,12 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Honeypot check – bots fill hidden fields
+    // Honeypot check
     if (honeypot) return;
 
     // Rate limiting – 30s between submissions
@@ -93,11 +96,16 @@ const ContactForm = () => {
     setErrors({});
     setIsSubmitting(true);
     setLastSubmitTime(now);
+    setSubmitStatus("idle");
 
-    // Simulate submission (no backend connected)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      alert("Merci ! Votre demande a bien été envoyée. Nous vous rappelons sous 48h.");
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      setSubmitStatus("success");
       setFormData({
         firstName: "",
         lastName: "",
@@ -106,7 +114,12 @@ const ContactForm = () => {
         projectType: "",
         description: "",
       });
-    }, 500);
+    } catch (err) {
+      console.error("Erreur envoi formulaire:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const clearError = (field: keyof FormErrors) => {
@@ -248,6 +261,16 @@ const ContactForm = () => {
           </span>
         )}
       </button>
+      {submitStatus === "success" && (
+        <div className="mt-4 p-4 rounded-2xl bg-green-50 border border-green-200 text-green-800 text-sm font-medium">
+          ✅ Merci ! Votre demande a bien été envoyée. Nous vous recontacterons sous 48h.
+        </div>
+      )}
+      {submitStatus === "error" && (
+        <div className="mt-4 p-4 rounded-2xl bg-red-50 border border-red-200 text-red-800 text-sm font-medium">
+          ❌ Une erreur est survenue. Veuillez réessayer ou nous appeler au 06 69 20 97 88.
+        </div>
+      )}
     </form>
   );
 };
