@@ -101,9 +101,6 @@ const categories = [{
 }, {
   key: "renovation",
   label: "Rénovation"
-}, {
-  key: "autres",
-  label: "Autres"
 }];
 const projects = [{
   images: [realIzeauxMac4, realIzeauxMac5, realIzeauxMac1, realIzeauxMac2, realIzeauxMac3, realIzeauxMac6],
