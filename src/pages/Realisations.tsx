@@ -163,7 +163,7 @@ const projects = [{
   description: "Création de deux ouvertures en sous-œuvre dans un mur en pierres, coulage d'une dalle béton armé et construction d'une mezzanine en structure bois pour réhabiliter un bâtiment ancien."
 }, {
   images: [realVoreppe1, realVoreppe2],
-  category: ["maconnerie", "autres"],
+  category: ["maconnerie", "renovation"],
   categoryLabel: "Rénovation & Gros œuvre",
   title: "Réfection d'un mur en pierres avec arase et couvertine",
   location: "Voreppe (38)",
