@@ -90,7 +90,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-base">Écrivez-nous</p>
-                  <a href="mailto:contact@kf-services.fr" className="text-base text-muted-foreground hover:text-foreground transition-colors">Vous remplissez le formulaire, nous vous recontactons pour comprendre votre projet, puis nous nous déplaçons chez vous pour établir un devis précis.</a>
+                  <a href="mailto:contact@kf-services.fr" className="text-base text-muted-foreground hover:text-foreground transition-colors">contact@kf-services.fr</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
