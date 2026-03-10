@@ -14,7 +14,7 @@ import ChantierIcon from "../assets/Chantier.svg";
 import WorkersIcon from "../assets/Workers.svg";
 import servicesMaconnerie from "../assets/services-maconnerie.jpg";
 import servicesCharpente from "../assets/services-charpente.jpg";
-import servicesGouttieres from "../assets/services-gouttieres.jpg";
+
 import hero1 from "../assets/hero-1.jpeg";
 import hero2 from "../assets/hero-2.jpeg";
 import hero3 from "../assets/hero-3.jpeg";
@@ -64,9 +64,6 @@ const services = [{
   icon: Wrench,
   label: "Plomberie & Chauffage"
 }, {
-  icon: Droplets,
-  label: "Gouttières Aluminium"
-}, {
   icon: Building2,
   label: "Neuf & Rénovation"
 }];
@@ -80,11 +77,6 @@ const serviceCards = [{
   title: "CHARPENTE & COUVERTURE",
   subtitle: "PROTECTION & ISOLATION",
   benefits: ["Une toiture étanche qui vous protège des intempéries", "Une isolation performante qui réduit vos factures d'énergie", "Des matériaux durables pour 30 ans de tranquillité", "Zinguerie et étanchéité pour zéro infiltration"]
-}, {
-  icon: Droplets,
-  title: "GOUTTIÈRES ALUMINIUM",
-  subtitle: "ÉVACUATION & ÉTANCHÉITÉ",
-  benefits: ["Des gouttières sur mesure intégrées à votre toiture", "Des raccordements étanches qui éliminent les fuites", "Une protection durable de vos façades et fondations"]
 }, {
   icon: Wrench,
   title: "PLOMBERIE & CHAUFFAGE",
@@ -149,11 +141,6 @@ const portfolioItems = [{
   title: "Charpente & Couverture",
   desc: "Une toiture qui vous met à l'abri pour des décennies.",
   alt: "Charpente et couverture de toiture en Auvergne-Rhône-Alpes – KF Services"
-}, {
-  img: servicesGouttieres,
-  title: "Gouttières Aluminium",
-  desc: "Des gouttières sur mesure qui protègent vos façades.",
-  alt: "Pose de gouttières aluminium sur mesure – KF Services Voiron"
 }, {
   img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
   title: "Plomberie & Chauffage",

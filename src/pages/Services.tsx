@@ -6,7 +6,7 @@ import ParallaxSection from "../components/animations/ParallaxSection";
 import KFButton from "../components/ui/KFButton";
 import servicesMaconnerie from "../assets/services-maconnerie.jpg";
 import servicesCharpente2 from "../assets/services-charpente-2.jpg";
-import servicesGouttieres2 from "../assets/services-gouttieres-2.jpg";
+
 import servicesConstruction from "../assets/services-construction.jpg";
 const servicesData = [{
   title: "Maçonnerie",
@@ -45,7 +45,7 @@ const Services = () => {
   useEffect(() => {
     document.title = "Nos services | Maçonnerie, charpente & couverture – KF Services";
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Maçonnerie, charpente, couverture, gouttières alu et plomberie à Voiron (38). KF Services intervient en neuf et rénovation en Rhône-Alpes.");
+    if (meta) meta.setAttribute("content", "Maçonnerie, charpente, couverture et plomberie à Voiron (38). KF Services intervient en neuf et rénovation en Rhône-Alpes.");
   }, []);
 
   return <div>
