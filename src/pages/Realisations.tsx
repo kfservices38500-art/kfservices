@@ -156,7 +156,7 @@ const projects = [{
   description: "Construction d'une piscine à débordement en béton armé, du terrassement au coulage du radier et élévation des murs en parpaings avec local technique intégré."
 }, {
   images: [realSassenage9, realSassenage10, realSassenage1, realSassenage2, realSassenage4, realSassenage3, realSassenage5, realSassenage6, realSassenage7, realSassenage8],
-  category: ["maconnerie", "autres"],
+  category: ["maconnerie", "renovation"],
   categoryLabel: "Rénovation & Gros œuvre",
   title: "Ouvertures en sous-œuvre et mezzanine bois dans bâtiment en pierres",
   location: "Sassenage (38)",
