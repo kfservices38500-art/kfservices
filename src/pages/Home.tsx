@@ -64,9 +64,6 @@ const services = [{
   icon: Wrench,
   label: "Plomberie & Chauffage"
 }, {
-  icon: Droplets,
-  label: "Gouttières Aluminium"
-}, {
   icon: Building2,
   label: "Neuf & Rénovation"
 }];
