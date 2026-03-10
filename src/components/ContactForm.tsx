@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 
 const projectTypes = [
   "Maçonnerie",
