@@ -64,10 +64,12 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Honeypot check – bots fill hidden fields
+    // Honeypot check
     if (honeypot) return;
 
     // Rate limiting – 30s between submissions
@@ -94,11 +96,16 @@ const ContactForm = () => {
     setErrors({});
     setIsSubmitting(true);
     setLastSubmitTime(now);
+    setSubmitStatus("idle");
 
-    // Simulate submission (no backend connected)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      alert("Merci ! Votre demande a bien été envoyée. Nous vous rappelons sous 48h.");
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      setSubmitStatus("success");
       setFormData({
         firstName: "",
         lastName: "",
@@ -107,7 +114,12 @@ const ContactForm = () => {
         projectType: "",
         description: "",
       });
-    }, 500);
+    } catch (err) {
+      console.error("Erreur envoi formulaire:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const clearError = (field: keyof FormErrors) => {
