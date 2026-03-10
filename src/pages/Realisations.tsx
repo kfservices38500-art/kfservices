@@ -177,7 +177,7 @@ const projects = [{
   description: "Construction complète d'un abri de jardin en madriers bois massif avec charpente traditionnelle et couverture en tuiles, intégré harmonieusement au terrain."
 }, {
   images: [realLesEchelles3, realLesEchelles10, realLesEchelles4, realLesEchelles1, realLesEchelles2, realLesEchelles5, realLesEchelles6, realLesEchelles9, realLesEchelles7, realLesEchelles8],
-  category: ["maconnerie", "autres"],
+  category: ["maconnerie", "renovation"],
   categoryLabel: "Rénovation & Gros œuvre",
   title: "Aménagement d'une grange en habitation avec plancher bois",
   location: "Les Échelles (73)",
