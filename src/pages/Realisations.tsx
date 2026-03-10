@@ -99,8 +99,8 @@ const categories = [{
   key: "plomberie",
   label: "Plomberie"
 }, {
-  key: "autres",
-  label: "Autres"
+  key: "renovation",
+  label: "Rénovation"
 }];
 const projects = [{
   images: [realIzeauxMac4, realIzeauxMac5, realIzeauxMac1, realIzeauxMac2, realIzeauxMac3, realIzeauxMac6],
@@ -132,7 +132,7 @@ const projects = [{
   description: "Création de terrasses surélevées et ossatures bois adossées à une maison existante, alliant structure porteuse et esthétique naturelle."
 }, {
   images: [realSteCrossey2, realSteCrossey1, realSteCrossey3],
-  category: ["charpente", "autres"],
+  category: ["charpente", "renovation"],
   categoryLabel: "Charpente & Rénovation",
   title: "Mezzanine en bois avec dalle de verre intégrée",
   location: "Saint-Étienne-de-Crossey (38)",
@@ -153,14 +153,14 @@ const projects = [{
   description: "Construction d'une piscine à débordement en béton armé, du terrassement au coulage du radier et élévation des murs en parpaings avec local technique intégré."
 }, {
   images: [realSassenage9, realSassenage10, realSassenage1, realSassenage2, realSassenage4, realSassenage3, realSassenage5, realSassenage6, realSassenage7, realSassenage8],
-  category: ["maconnerie", "autres"],
+  category: ["maconnerie", "renovation"],
   categoryLabel: "Rénovation & Gros œuvre",
   title: "Ouvertures en sous-œuvre et mezzanine bois dans bâtiment en pierres",
   location: "Sassenage (38)",
   description: "Création de deux ouvertures en sous-œuvre dans un mur en pierres, coulage d'une dalle béton armé et construction d'une mezzanine en structure bois pour réhabiliter un bâtiment ancien."
 }, {
   images: [realVoreppe1, realVoreppe2],
-  category: ["maconnerie", "autres"],
+  category: ["maconnerie", "renovation"],
   categoryLabel: "Rénovation & Gros œuvre",
   title: "Réfection d'un mur en pierres avec arase et couvertine",
   location: "Voreppe (38)",
@@ -174,7 +174,7 @@ const projects = [{
   description: "Construction complète d'un abri de jardin en madriers bois massif avec charpente traditionnelle et couverture en tuiles, intégré harmonieusement au terrain."
 }, {
   images: [realLesEchelles3, realLesEchelles10, realLesEchelles4, realLesEchelles1, realLesEchelles2, realLesEchelles5, realLesEchelles6, realLesEchelles9, realLesEchelles7, realLesEchelles8],
-  category: ["maconnerie", "autres"],
+  category: ["maconnerie", "renovation"],
   categoryLabel: "Rénovation & Gros œuvre",
   title: "Aménagement d'une grange en habitation avec plancher bois",
   location: "Les Échelles (73)",
