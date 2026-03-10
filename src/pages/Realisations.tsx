@@ -135,7 +135,7 @@ const projects = [{
   description: "Création de terrasses surélevées et ossatures bois adossées à une maison existante, alliant structure porteuse et esthétique naturelle."
 }, {
   images: [realSteCrossey2, realSteCrossey1, realSteCrossey3],
-  category: ["charpente", "autres"],
+  category: ["charpente", "renovation"],
   categoryLabel: "Charpente & Rénovation",
   title: "Mezzanine en bois avec dalle de verre intégrée",
   location: "Saint-Étienne-de-Crossey (38)",
