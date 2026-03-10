@@ -90,7 +90,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-base">Écrivez-nous</p>
-                  <a href="mailto:contact@kf-services.fr" className="text-base text-muted-foreground hover:text-foreground transition-colors">Vous remplissez le formulaire, nous vous recontactons pour comprendre votre projet, puis nous nous déplaçons chez vous pour établir un devis précis.</a>
+                  <a href="mailto:contact@kf-services.fr" className="text-base text-muted-foreground hover:text-foreground transition-colors">contact@kf-services.fr</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -112,7 +112,7 @@ const Contact = () => {
             </div>
 
             <div className="mt-8 p-6 gradient-red rounded-3xl">
-              <h3 className="font-bold text-base text-white mb-2">Où que vous soyez, nous nous déplaçons chez vous         </h3>
+              <h3 className="font-bold text-base text-white mb-2">Où que vous soyez, nous nous déplaçons chez vous</h3>
               <p className="text-sm text-white/80">
                 Intervention dans toute la région Auvergne-Rhône-Alpes : Isère, Savoie, Haute-Savoie, Rhône, Drôme, Ain et tous les départements de la région. 
               </p>
