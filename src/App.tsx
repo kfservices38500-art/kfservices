@@ -12,13 +12,18 @@ import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
 import CookieBanner from "./components/CookieBanner";
 import ChatBot from "./components/ChatBot";
+import ClickToCall from "./components/ClickToCall";
+import JsonLd from "./components/JsonLd";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <JsonLd />
       <div className="min-h-screen flex flex-col">
         <Header />
+        <Breadcrumbs />
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -34,6 +39,7 @@ const App = () => {
         <Footer />
         <CookieBanner />
         <ChatBot />
+        <ClickToCall />
       </div>
     </BrowserRouter>
   );
