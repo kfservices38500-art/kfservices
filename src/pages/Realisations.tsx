@@ -170,7 +170,7 @@ const projects = [{
   category: ["charpente"],
   categoryLabel: "Charpente/Couverture",
   title: "Abri de jardin en bois avec couverture tuiles",
-  location: "Mont-Saint-Martin (54)",
+  location: "Mont-Saint-Martin (38)",
   description: "Construction complète d'un abri de jardin en madriers bois massif avec charpente traditionnelle et couverture en tuiles, intégré harmonieusement au terrain."
 }, {
   images: [realLesEchelles3, realLesEchelles10, realLesEchelles4, realLesEchelles1, realLesEchelles2, realLesEchelles5, realLesEchelles6, realLesEchelles9, realLesEchelles7, realLesEchelles8],
