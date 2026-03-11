@@ -83,8 +83,7 @@ const deptNames: Record<string, string> = {
   "63": "Puy-de-Dôme",
   "69": "Rhône",
   "73": "Savoie",
-  "74": "Haute-Savoie",
-  "54": "Meurthe-et-Moselle"
+  "74": "Haute-Savoie"
 };
 const categories = [{
   key: "all",
