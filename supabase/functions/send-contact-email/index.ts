@@ -23,7 +23,7 @@ const RATE_LIMIT_MS = 30_000;
 
 const SMTP_CONFIG = {
   hostname: "smtp.hostinger.com",
-  port: 587,
+  port: 465,
   username: "contact@kf-services.fr",
   from: "contact@kf-services.fr",
   to: "contact@kf-services.fr",
