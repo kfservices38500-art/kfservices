@@ -416,6 +416,13 @@ const Home = () => {
   const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
   const [locationInput, setLocationInput] = useState("");
+  const ctaSectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress: ctaScrollProgress } = useScroll({
+    target: ctaSectionRef,
+    offset: ["start end", "end start"],
+  });
+  const ctaParallaxY = useTransform(ctaScrollProgress, [0, 1], ["-8%", "8%"]);
+  const ctaParallaxScale = useTransform(ctaScrollProgress, [0, 0.5, 1], [1.15, 1.05, 1.15]);
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
