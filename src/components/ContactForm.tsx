@@ -56,7 +56,11 @@ const contactSchema = z.object({
 
 type FormErrors = Partial<Record<keyof z.infer<typeof contactSchema>, string>>;
 
-const ContactForm = () => {
+interface ContactFormProps {
+  initialLocation?: string;
+}
+
+const ContactForm = ({ initialLocation = "" }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -64,7 +68,14 @@ const ContactForm = () => {
     phone: "",
     projectType: "",
     description: "",
+    location: initialLocation,
   });
+
+  useEffect(() => {
+    if (initialLocation) {
+      setFormData((prev) => ({ ...prev, location: initialLocation }));
+    }
+  }, [initialLocation]);
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
