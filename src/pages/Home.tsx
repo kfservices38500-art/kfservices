@@ -502,11 +502,11 @@ const Home = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="relative overflow-hidden bg-muted">
+      <section className="relative overflow-hidden bg-muted min-h-[280px] md:min-h-[320px]">
         {/* Background photo – visible on right side on desktop */}
         <div className="absolute inset-0">
-          <img src={ctaBgImg} alt="" className="w-full h-full object-cover object-[90%_center]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 via-55% to-background/30" />
+          <img src={ctaBgImg} alt="" className="w-full h-full object-cover object-right-top" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 via-50% to-background/20" />
         </div>
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
           <ScrollReveal>
