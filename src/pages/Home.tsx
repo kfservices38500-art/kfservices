@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-import { ArrowUpRight, Hammer, Home as HomeIcon, Droplets, Wrench, Building2, Star, Users, MapPin, CheckCircle2, ChevronRight, Shield, FileCheck, Award, Scale, Quote } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Phone, Hammer, Home as HomeIcon, Droplets, Wrench, Building2, Star, Users, MapPin, CheckCircle2, ChevronRight, Shield, FileCheck, Award, Scale, Quote } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 import ScrollReveal from "../components/animations/ScrollReveal";
@@ -23,37 +24,38 @@ import hero4 from "../assets/hero-4.jpeg";
 import hero5 from "../assets/hero-5.jpeg";
 import hero6 from "../assets/hero-6.jpeg";
 import budgetMaitriseImg from "../assets/budget-maitrise-new.jpg";
+import ctaBgImg from "../assets/cta-demandedevis-2.svg";
 import servicesCardImg from "../assets/services-card.jpg";
 const heroImages = [{
   src: hero1,
   alt: "Maçonnerie et construction de piscine béton à Voiron – KF Services",
   left: { icon: "Shield", text: "Garantie décennale incluse" },
-  right: { icon: "CheckCircle2", text: "Solidité & durabilité" }
+  right: { icon: "CheckCircle2", text: "Solidité & durabilité" },
 }, {
   src: hero2,
   alt: "Charpente fermettes bois en Isère – KF Services",
   left: { icon: "Award", text: "Artisans qualifiés" },
-  right: { icon: "Shield", text: "Toiture protégée 30 ans" }
+  right: { icon: "Shield", text: "Toiture protégée 30 ans" },
 }, {
   src: hero3,
   alt: "Dalle béton armé pour maison neuve – KF Services Voiron",
   left: { icon: "FileCheck", text: "Devis gratuit sous 48h" },
-  right: { icon: "Scale", text: "Prix fixe sans surprise" }
+  right: { icon: "Scale", text: "Prix fixe sans surprise" },
 }, {
   src: hero4,
   alt: "Carport bois avec claustra sur mesure – KF Services",
   left: { icon: "Star", text: "Finitions sur mesure" },
-  right: { icon: "CheckCircle2", text: "Bois sélectionné avec soin" }
+  right: { icon: "CheckCircle2", text: "Bois sélectionné avec soin" },
 }, {
   src: hero5,
   alt: "Rénovation de façade en pierre en Auvergne-Rhône-Alpes – KF Services",
   left: { icon: "Award", text: "+20 ans d'expérience" },
-  right: { icon: "MapPin", text: "Auvergne-Rhône-Alpes" }
+  right: { icon: "MapPin", text: "Auvergne-Rhône-Alpes" },
 }, {
   src: hero6,
   alt: "Rénovation intérieure avec structure bois – KF Services Voiron",
   left: { icon: "Users", text: "Un seul interlocuteur" },
-  right: { icon: "Shield", text: "Chantier assuré & suivi" }
+  right: { icon: "Shield", text: "Chantier assuré & suivi" },
 }];
 const services = [{
   icon: Hammer,
@@ -411,7 +413,9 @@ const StatsCarousel = () => {
 
 };
 const Home = () => {
+  const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
+  const [locationInput, setLocationInput] = useState("");
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
@@ -496,7 +500,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Carousel */}
       <StatsCarousel />
 
@@ -551,12 +554,12 @@ const Home = () => {
               <img src={servicesCardImg} alt="Remise des clés après travaux de rénovation – KF Services Voiron" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex flex-wrap gap-2">
-                {services.map((s) =>
-              <span key={s.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/15 text-white text-[11px] font-medium rounded-full transition-all duration-300 hover:bg-black/60 cursor-default whitespace-nowrap">
+                {services.map((s) => (
+                  <span key={s.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/15 text-white text-[11px] font-medium rounded-full transition-all duration-300 hover:bg-black/60 cursor-default whitespace-nowrap">
                     <s.icon className="w-3.5 h-3.5 opacity-80" />
                     {s.label}
                   </span>
-              )}
+                ))}
               </div>
             </div>
           </ScrollReveal>
@@ -694,7 +697,7 @@ const Home = () => {
       <section className="gradient-red text-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScrollReveal>
-            
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Prêt à concrétiser votre projet ?</h2>
             <p className="text-white/70 text-base md:text-lg mb-8">En 48h, vous recevez une réponse et un rendez-vous pour avancer ensemble.</p>
             <KFButton to="/contact" variant="light">
               Obtenir mon devis gratuit
@@ -717,7 +720,72 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Map / Coverage + Google Maps */}
+      {/* CTA Banner */}
+      <section className="relative overflow-hidden bg-muted" style={{ aspectRatio: '1280 / 500' }}>
+        {/* Background photo – section matches image aspect ratio 1280×500 */}
+        <div className="absolute inset-0">
+          <img src={ctaBgImg} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 via-45% to-transparent" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 h-full flex items-center">
+          <ScrollReveal>
+            <div className="max-w-xl">
+              <div className="bg-background/95 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden">
+                {/* Top row */}
+                <div className="p-6 md:p-8">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                    Un projet de travaux en tête en<br /><span className="gradient-red-text">Auvergne-Rhône-Alpes ?</span>
+                  </h2>
+                  <div className="flex flex-col sm:flex-row items-stretch gap-3">
+                    <div className="flex-1 relative">
+                      <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                      <input
+                        type="text"
+                        placeholder="Code postal, ville"
+                        value={locationInput}
+                        onChange={(e) => setLocationInput(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            navigate(`/contact${locationInput.trim() ? `?location=${encodeURIComponent(locationInput.trim())}` : ""}`);
+                          }
+                        }}
+                        className="w-full pl-12 pr-5 py-4 rounded-2xl border-2 border-input bg-background text-base focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      />
+                    </div>
+                    <button
+                      onClick={() => navigate(`/contact${locationInput.trim() ? `?location=${encodeURIComponent(locationInput.trim())}` : ""}`)}
+                      className="btn-gradient px-8 py-4 rounded-full text-base font-bold inline-flex items-center justify-center gap-2 group whitespace-nowrap"
+                    >
+                      Je demande un devis
+                      <span className="relative w-5 h-5">
+                        <ArrowUpRight className="w-5 h-5 absolute inset-0 transition-all duration-300 group-hover:opacity-0 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        <ArrowRight className="w-5 h-5 absolute inset-0 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5" />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                {/* Bottom row – phone */}
+                <div className="bg-muted/80 px-6 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-border">
+                  <p className="text-sm md:text-base font-semibold text-muted-foreground">
+                    Vous pouvez aussi nous appeler directement
+                  </p>
+                  <a
+                    href="tel:+33669209788"
+                    className="inline-flex items-center gap-3 text-foreground font-bold text-lg md:text-xl hover:text-primary transition-colors"
+                  >
+                    <span className="w-9 h-9 rounded-full gradient-red flex items-center justify-center">
+                      <Phone className="w-4.5 h-4.5 text-white" />
+                    </span>
+                    06 69 20 97 88
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+
       <ParallaxSection className="bg-muted py-16 md:py-24" speed={0.1}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -729,13 +797,13 @@ const Home = () => {
             {departments.map((d, i) => <ScrollReveal key={d.code} delay={i * 0.04}>
                 <Link to={`/realisations?dept=${d.code}`}>
                   <motion.div
-                whileHover={{
-                  scale: 1.05,
-                  y: -6
-                }}
-                whileTap={{ scale: 0.96 }}
-                className="relative bg-background rounded-2xl overflow-hidden border border-border group cursor-pointer py-5 px-3 text-center transition-all duration-400 hover:border-primary/50 hover:shadow-[0_12px_40px_-10px_hsl(0_78%_55%/0.3)]">
-                
+                    whileHover={{
+                      scale: 1.05,
+                      y: -6,
+                    }}
+                    whileTap={{ scale: 0.96 }}
+                    className="relative bg-background rounded-2xl overflow-hidden border border-border group cursor-pointer py-5 px-3 text-center transition-all duration-400 hover:border-primary/50 hover:shadow-[0_12px_40px_-10px_hsl(0_78%_55%/0.3)]"
+                  >
                     {/* Gradient overlay on hover */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 gradient-red pointer-events-none" />
                     {/* MapPin icon */}
