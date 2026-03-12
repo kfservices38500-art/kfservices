@@ -570,7 +570,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
               <div>
                 <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">Tous vos travaux, un seul partenaire</p>
-                <h2 className="text-3xl md:text-5xl font-bold">Des solutions concrètes pour <span className="gradient-red-text">chaque besoin</span></h2>
+                <h2 className="text-3xl md:text-5xl font-bold">Des solutions concrètes pour <span className="gradient-red-text">chaque besoin.</span></h2>
               </div>
               <div className="flex items-end">
                 <p className="text-muted-foreground text-base md:text-lg">
@@ -614,7 +614,7 @@ const Home = () => {
         <ScrollReveal>
           <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2 text-center">Pourquoi nos clients nous font confiance</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
-            <span className="gradient-red-text">Rénovez sereinement,</span> on s'occupe de tout
+            <span className="gradient-red-text">Rénovez sereinement,</span> on s'occupe de tout.
           </h2>
         </ScrollReveal>
 
@@ -642,7 +642,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">La preuve par l'exemple</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Des résultats qui <span className="gradient-red-text">parlent d'eux-mêmes</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Des résultats qui <span className="gradient-red-text">parlent d'eux-mêmes.</span></h2>
             <p className="text-muted-foreground text-base md:text-lg mb-12 max-w-2xl">
               Chaque projet réalisé est un client satisfait. Découvrez ce que nos équipes peuvent accomplir pour transformer votre habitat.
             </p>
@@ -708,7 +708,7 @@ const Home = () => {
         <div className="max-w-2xl mx-auto text-center">
           <ScrollReveal>
             <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">SIMPLE ET RAPIDE</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Décrivez votre projet, <span className="gradient-red-text">on s'occupe de tout</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Décrivez votre projet, <span className="gradient-red-text">on s'occupe de tout.</span></h2>
             <p className="text-muted-foreground text-base md:text-lg mb-12">Remplissez le formulaire en 2 minutes. Nous vous recontactons sous 48h pour planifier une visite gratuite et obtenir votre devis détaillé.</p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
@@ -722,7 +722,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">Près de chez vous</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Nous intervenons partout en <span className="gradient-red-text">Auvergne-Rhône-Alpes</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Nous intervenons partout en <span className="gradient-red-text">Auvergne-Rhône-Alpes.</span></h2>
             <p className="text-muted-foreground text-base md:text-lg mb-12 max-w-2xl">Où que vous soyez dans la région, vous bénéficiez de la même qualité de services.</p>
           </ScrollReveal>
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 mb-12">

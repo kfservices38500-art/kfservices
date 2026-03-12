@@ -106,7 +106,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
           <ScrollReveal direction="left">
             <p className="text-white/70 font-bold text-base uppercase tracking-wider mb-2">Pourquoi nous faire confiance</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">+ de 20 ans d'expérience au service{"\n"}de <span className="text-white/90 italic">votre tranquillité</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">+ de 20 ans d'expérience au service{"\n"}de <span className="text-white/90 italic">votre tranquillité.</span></h2>
             <div className="space-y-4 text-white/80 text-base md:text-lg">
               <p>
                 Quand vous confiez votre chantier à KF Services, vous gagnez un avantage décisif : un seul interlocuteur qui maîtrise tous les métiers du bâtiment.
@@ -162,7 +162,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">Ce que vous gagnez avec nous</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12">Des engagements concrets, <span className="gradient-red-text">pas des promesses en l'air</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">Des engagements concrets, <span className="gradient-red-text">pas des promesses en l'air.</span></h2>
           </ScrollReveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => <ScrollReveal key={v.title} delay={i * 0.1}>
@@ -182,7 +182,7 @@ const About = () => {
       {/* Certifications */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Vos travaux protégés, <span className="gradient-red-text">votre esprit tranquille</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Vos travaux protégés, <span className="gradient-red-text">votre esprit tranquille.</span></h2>
         </ScrollReveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((c, i) => <ScrollReveal key={c.title} delay={i * 0.1}>

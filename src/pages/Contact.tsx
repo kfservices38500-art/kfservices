@@ -144,7 +144,7 @@ const Contact = () => {
       <section className="bg-muted py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Retrouvez-nous <span className="gradient-red-text">ici</span></h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Retrouvez-nous <span className="gradient-red-text">ici.</span></h2>
             <p className="text-base text-muted-foreground mb-8 text-center">Nous intervenons dans toute la région Auvergne-Rhône-Alpes</p>
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.509!2d5.5917!3d45.3629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af4818e91c82f%3A0x0!2s58+Rue+des+Tallifardi%C3%A8res%2C+38500+Voiron!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" width="100%" height="400" style={{
