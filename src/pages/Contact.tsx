@@ -1,11 +1,13 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, CalendarCheck, FileText, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 import ScrollReveal from "../components/animations/ScrollReveal";
 import contactIcon from "@/assets/contact-icon.svg";
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const locationParam = searchParams.get("location") || "";
   useEffect(() => {
     document.title = "Contact & devis gratuit | KF Services – Voiron (38)";
     const meta = document.querySelector('meta[name="description"]');
@@ -131,7 +133,7 @@ const Contact = () => {
               <p className="text-base text-muted-foreground mb-6">
                 Plus vous êtes précis, plus notre devis sera adapté à vos besoins réels.
               </p>
-              <ContactForm />
+              <ContactForm initialLocation={locationParam} />
               <p className="text-sm text-muted-foreground mt-4">
                 En soumettant ce formulaire, vous acceptez notre politique de confidentialité. Aucun engagement, aucun frais.
               </p>

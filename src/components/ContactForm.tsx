@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
@@ -46,11 +46,21 @@ const contactSchema = z.object({
     .trim()
     .min(1, "La description est requise")
     .max(2000, "La description ne doit pas dépasser 2000 caractères"),
+  location: z
+    .string()
+    .trim()
+    .max(100, "La localisation ne doit pas dépasser 100 caractères")
+    .optional()
+    .or(z.literal("")),
 });
 
 type FormErrors = Partial<Record<keyof z.infer<typeof contactSchema>, string>>;
 
-const ContactForm = () => {
+interface ContactFormProps {
+  initialLocation?: string;
+}
+
+const ContactForm = ({ initialLocation = "" }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -58,7 +68,14 @@ const ContactForm = () => {
     phone: "",
     projectType: "",
     description: "",
+    location: initialLocation,
   });
+
+  useEffect(() => {
+    if (initialLocation) {
+      setFormData((prev) => ({ ...prev, location: initialLocation }));
+    }
+  }, [initialLocation]);
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -113,6 +130,7 @@ const ContactForm = () => {
         phone: "",
         projectType: "",
         description: "",
+        location: "",
       });
     } catch (err) {
       console.error("Erreur envoi formulaire:", err);
@@ -231,6 +249,21 @@ const ContactForm = () => {
           ))}
         </select>
         {errors.projectType && <p className="text-red-500 text-sm mt-1">{errors.projectType}</p>}
+      </div>
+      <div className="mb-4">
+        <label className="block text-base font-semibold mb-2">Code postal, ville</label>
+        <input
+          type="text"
+          maxLength={100}
+          placeholder="Ex : 38500 Voiron"
+          value={formData.location}
+          onChange={(e) => {
+            setFormData({ ...formData, location: e.target.value });
+            clearError("location");
+          }}
+          className={`w-full px-5 py-3.5 rounded-2xl border-2 bg-background text-base focus:outline-none focus:ring-2 focus:ring-ring transition-all ${errors.location ? "border-red-500" : "border-input"}`}
+        />
+        {errors.location && <p className="text-red-500 text-sm mt-1">{errors.location}</p>}
       </div>
       <div className="mb-6">
         <label className="block text-base font-semibold mb-2">Décrivez votre projet *</label>
