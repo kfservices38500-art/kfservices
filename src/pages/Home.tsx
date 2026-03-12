@@ -506,23 +506,38 @@ const Home = () => {
           <ScrollReveal>
             <div className="bg-background rounded-3xl shadow-lg overflow-hidden">
               {/* Top row */}
-              <div className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-1">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                    Un projet de travaux en tête<span className="gradient-red-text"> ?</span>
-                  </h2>
-                  <div className="w-16 h-1 gradient-red rounded-full" />
+              <div className="p-6 md:p-8">
+                <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                  Un projet de travaux en tête<span className="gradient-red-text"> ?</span>
+                </h2>
+                <div className="w-16 h-1 gradient-red rounded-full mb-6" />
+                <div className="flex flex-col sm:flex-row items-stretch gap-3">
+                  <div className="flex-1 relative">
+                    <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                    <input
+                      type="text"
+                      placeholder="Code postal, ville"
+                      value={locationInput}
+                      onChange={(e) => setLocationInput(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          navigate(`/contact${locationInput.trim() ? `?location=${encodeURIComponent(locationInput.trim())}` : ""}`);
+                        }
+                      }}
+                      className="w-full pl-12 pr-5 py-4 rounded-2xl border-2 border-input bg-background text-base focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                    />
+                  </div>
+                  <button
+                    onClick={() => navigate(`/contact${locationInput.trim() ? `?location=${encodeURIComponent(locationInput.trim())}` : ""}`)}
+                    className="btn-gradient px-8 py-4 rounded-full text-base font-bold inline-flex items-center justify-center gap-2 group whitespace-nowrap"
+                  >
+                    Je demande un devis
+                    <span className="relative w-5 h-5">
+                      <ArrowUpRight className="w-5 h-5 absolute inset-0 transition-all duration-300 group-hover:opacity-0 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      <ArrowRight className="w-5 h-5 absolute inset-0 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5" />
+                    </span>
+                  </button>
                 </div>
-                <Link
-                  to="/contact"
-                  className="btn-gradient px-8 py-4 rounded-full text-base font-bold inline-flex items-center gap-2 group whitespace-nowrap"
-                >
-                  Je demande un devis
-                  <span className="relative w-5 h-5">
-                    <ArrowUpRight className="w-5 h-5 absolute inset-0 transition-all duration-300 group-hover:opacity-0 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    <ArrowRight className="w-5 h-5 absolute inset-0 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
               </div>
               {/* Bottom row – phone */}
               <div className="bg-muted px-6 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-border">
