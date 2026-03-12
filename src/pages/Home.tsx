@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { ArrowUpRight, Hammer, Home as HomeIcon, Droplets, Wrench, Building2, Star, Users, MapPin, CheckCircle2, ChevronRight, Shield, FileCheck, Award, Scale, Quote } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Phone, Hammer, Home as HomeIcon, Droplets, Wrench, Building2, Star, Users, MapPin, CheckCircle2, ChevronRight, Shield, FileCheck, Award, Scale, Quote } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
