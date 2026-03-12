@@ -6,6 +6,8 @@ import ContactForm from "../components/ContactForm";
 import ScrollReveal from "../components/animations/ScrollReveal";
 import contactIcon from "@/assets/contact-icon.svg";
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const locationParam = searchParams.get("location") || "";
   useEffect(() => {
     document.title = "Contact & devis gratuit | KF Services – Voiron (38)";
     const meta = document.querySelector('meta[name="description"]');
