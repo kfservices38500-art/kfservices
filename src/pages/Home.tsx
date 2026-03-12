@@ -24,6 +24,7 @@ import hero4 from "../assets/hero-4.jpeg";
 import hero5 from "../assets/hero-5.jpeg";
 import hero6 from "../assets/hero-6.jpeg";
 import budgetMaitriseImg from "../assets/budget-maitrise-new.jpg";
+import ctaBgImg from "../assets/cta-bg.jpg";
 import servicesCardImg from "../assets/services-card.jpg";
 const heroImages = [{
   src: hero1,
