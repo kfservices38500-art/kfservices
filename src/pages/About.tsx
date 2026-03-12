@@ -182,7 +182,7 @@ const About = () => {
       {/* Certifications */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Vos travaux protégés, <span className="gradient-red-text">votre esprit tranquille</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Vos travaux protégés, <span className="gradient-red-text">votre esprit tranquille.</span></h2>
         </ScrollReveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((c, i) => <ScrollReveal key={c.title} delay={i * 0.1}>

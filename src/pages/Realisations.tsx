@@ -296,7 +296,7 @@ const Realisations = () => {
       <section className="gradient-red text-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Votre projet mérite aussi le même niveau d'exigence et de qualité</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Votre projet mérite aussi le même niveau d'exigence et de qualité.</h2>
             <p className="text-white/70 text-base md:text-lg mb-8">Parlez-nous de vos besoins et recevez un devis personnalisé sous 48h.</p>
             <KFButton to="/contact" variant="light">
               Obtenir mon devis gratuit
