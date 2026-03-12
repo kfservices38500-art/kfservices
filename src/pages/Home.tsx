@@ -444,7 +444,7 @@ const Home = () => {
               <span className="gradient-red-text">plus sûre, plus belle.</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-lg">
-              La diversité de nos activités vous permettra de réduire les interlocuteurs ainsi qu'une meilleure coordination de vos travaux.
+              La diversité de nos activités vous permet de réduire le nombre d'interlocuteurs et d'assurer une meilleure coordination de vos travaux.
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               <KFButton to="/contact" variant="gradient">
