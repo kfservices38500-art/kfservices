@@ -697,12 +697,18 @@ const Home = () => {
 
 
       {/* CTA Banner */}
-      <section className="relative overflow-hidden bg-muted" style={{ aspectRatio: '1280 / 500' }}>
-        {/* Background photo – section matches image aspect ratio 1280×500 */}
-        <div className="absolute inset-0">
-          <img src={ctaBgImg} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 via-45% to-transparent" />
-        </div>
+      <section className="relative overflow-hidden bg-muted" style={{ aspectRatio: '1280 / 500' }} ref={ctaSectionRef}>
+        {/* Background photo with parallax */}
+        <motion.div
+          className="absolute inset-0"
+          style={{
+            y: ctaParallaxY,
+            scale: ctaParallaxScale,
+          }}
+        >
+          <img src={ctaBgImg} alt="" className="w-full h-full object-cover" style={{ minHeight: '120%', marginTop: '-10%' }} />
+        </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 via-45% to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 h-full flex items-center">
           <ScrollReveal>
             <div className="max-w-xl">
