@@ -507,10 +507,9 @@ const Home = () => {
             <div className="bg-background rounded-3xl shadow-lg overflow-hidden">
               {/* Top row */}
               <div className="p-6 md:p-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                  Un projet de travaux en tête<span className="gradient-red-text"> ?</span>
+                <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                  Un projet de travaux en tête en Auvergne-Rhône-Alpes<span className="gradient-red-text"> ?</span>
                 </h2>
-                <div className="w-16 h-1 gradient-red rounded-full mb-6" />
                 <div className="flex flex-col sm:flex-row items-stretch gap-3">
                   <div className="flex-1 relative">
                     <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
