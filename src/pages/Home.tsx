@@ -642,7 +642,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2">La preuve par l'exemple</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Des résultats qui <span className="gradient-red-text">parlent d'eux-mêmes</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Des résultats qui <span className="gradient-red-text">parlent d'eux-mêmes.</span></h2>
             <p className="text-muted-foreground text-base md:text-lg mb-12 max-w-2xl">
               Chaque projet réalisé est un client satisfait. Découvrez ce que nos équipes peuvent accomplir pour transformer votre habitat.
             </p>
