@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, ArrowRight, Phone, Hammer, Home as HomeIcon, Droplets, Wrench, Building2, Star, Users, MapPin, CheckCircle2, ChevronRight, Shield, FileCheck, Award, Scale, Quote } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 import ScrollReveal from "../components/animations/ScrollReveal";
 import ParallaxSection from "../components/animations/ParallaxSection";
