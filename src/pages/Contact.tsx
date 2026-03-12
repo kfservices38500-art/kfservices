@@ -28,7 +28,7 @@ const Contact = () => {
           }} transition={{
             duration: 0.7
           }} className="flex-1 text-left">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white">Lancez votre projet <span className="text-white/80">en 2 minutes</span></h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white">Lancez votre projet <span className="text-white/80">en 2 minutes.</span></h1>
               <p className="text-white/80 text-lg md:text-xl max-w-2xl mb-8">
                 Décrivez votre projet et vos besoins, nous vous contacterons dans les 48h pour une visite gratuite et un devis détaillé sans engagement.
               </p>
