@@ -614,7 +614,7 @@ const Home = () => {
         <ScrollReveal>
           <p className="gradient-red-text font-bold text-base uppercase tracking-wider mb-2 text-center">Pourquoi nos clients nous font confiance</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
-            <span className="gradient-red-text">Rénovez sereinement,</span> on s'occupe de tout
+            <span className="gradient-red-text">Rénovez sereinement,</span> on s'occupe de tout.
           </h2>
         </ScrollReveal>
 
