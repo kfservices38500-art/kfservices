@@ -23,23 +23,35 @@ const stats = [{
   icon: WorkersIcon
 }];
 const timeline = [{
+  number: "01",
   year: "2003",
-  desc: "Notre gérant entre dans le métier - plus de 20 ans d'expérience à votre service"
+  title: "Entrée dans le métier",
+  desc: "Plus de 20 ans d'expérience à votre service."
 }, {
+  number: "02",
   year: "2010",
-  desc: "Spécialisation charpente - couverture pour mieux protéger votre toiture"
+  title: "Spécialisation toiture",
+  desc: "Charpente et couverture pour mieux protéger votre bien."
 }, {
+  number: "03",
   year: "2015",
-  desc: "Élargissement des compétences - plomberie et chauffage intégrés à notre offre"
+  title: "Élargissement des compétences",
+  desc: "Plomberie et chauffage intégrés à notre offre."
 }, {
+  number: "04",
   year: "2022",
-  desc: "Création de KF Services - un interlocuteur unique pour tous vos travaux"
+  title: "Création de KF Services",
+  desc: "Un interlocuteur unique pour tous vos travaux."
 }, {
+  number: "05",
   year: "2023",
-  desc: "3 équipes spécialisées - des délais plus courts pour vos projets"
+  title: "3 équipes spécialisées",
+  desc: "Des délais plus courts pour vos projets."
 }, {
+  number: "06",
   year: "2026",
-  desc: "+300 chantiers livrés - autant de clients satisfaits"
+  title: "+300 chantiers livrés",
+  desc: "Autant de clients satisfaits."
 }];
 const values = [{
   icon: Target,
