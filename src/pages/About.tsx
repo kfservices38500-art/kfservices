@@ -60,7 +60,7 @@ const values = [{
 }, {
   icon: Heart,
   title: "Engagement total",
-  desc: "Chaque projet est traité comme s'il était le nôtre — pour que vous soyez fier du résultat."
+  desc: "Chaque projet est traité comme s'il était le nôtre - pour que vous soyez fier du résultat."
 }, {
   icon: Eye,
   title: "Transparence totale",
