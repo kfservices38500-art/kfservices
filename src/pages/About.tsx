@@ -106,7 +106,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
           <ScrollReveal direction="left">
             <p className="text-white/70 font-bold text-base uppercase tracking-wider mb-2">Pourquoi nous faire confiance</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">+ de 20 ans d'expérience au service{"\n"}de <span className="text-white/90 italic">votre tranquillité</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">+ de 20 ans d'expérience au service{"\n"}de <span className="text-white/90 italic">votre tranquillité.</span></h2>
             <div className="space-y-4 text-white/80 text-base md:text-lg">
               <p>
                 Quand vous confiez votre chantier à KF Services, vous gagnez un avantage décisif : un seul interlocuteur qui maîtrise tous les métiers du bâtiment.
