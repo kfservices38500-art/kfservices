@@ -412,7 +412,9 @@ const StatsCarousel = () => {
 
 };
 const Home = () => {
+  const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
+  const [locationInput, setLocationInput] = useState("");
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
