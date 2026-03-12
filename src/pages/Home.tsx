@@ -502,13 +502,13 @@ const Home = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="relative overflow-hidden bg-muted min-h-[280px] md:min-h-[320px]">
-        {/* Background photo – visible on right side on desktop */}
+      <section className="relative overflow-hidden bg-muted">
+        {/* Background photo – matches image aspect ratio */}
         <div className="absolute inset-0">
-          <img src={ctaBgImg} alt="" className="w-full h-full object-cover object-right-top" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 via-50% to-background/20" />
+          <img src={ctaBgImg} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 via-45% to-transparent" />
         </div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
           <ScrollReveal>
             <div className="max-w-xl">
               <div className="bg-background/95 backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden">
