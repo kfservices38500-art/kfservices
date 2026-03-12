@@ -133,7 +133,7 @@ const Contact = () => {
               <p className="text-base text-muted-foreground mb-6">
                 Plus vous êtes précis, plus notre devis sera adapté à vos besoins réels.
               </p>
-              <ContactForm />
+              <ContactForm initialLocation={locationParam} />
               <p className="text-sm text-muted-foreground mt-4">
                 En soumettant ce formulaire, vous acceptez notre politique de confidentialité. Aucun engagement, aucun frais.
               </p>
