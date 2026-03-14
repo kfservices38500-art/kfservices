@@ -51,7 +51,7 @@ import realSassenage6 from "../assets/real-sassenage-6.jpeg";
 import realSassenage7 from "../assets/real-sassenage-7.jpeg";
 import realSassenage8 from "../assets/real-sassenage-8.jpeg";
 import realSassenage9 from "../assets/real-sassenage-9.jpeg";
-import realSassenage10 from "../assets/real-sassenage-10.jpeg";
+
 import realVoreppe1 from "../assets/real-voreppe-1.jpeg";
 import realVoreppe2 from "../assets/real-voreppe-2.jpeg";
 import realMontStMartin1 from "../assets/real-montstmartin-1.jpeg";
